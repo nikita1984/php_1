@@ -32,7 +32,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $fileSize = DOWNLOAD_FILE_SIZE;
         $errorText = "Не соблюдены требования к загрузке файла: Разрешение jpeg, размер не более {$fileSize} kB";
       }
-      header("Location: /public/");     
+      header("Location: /les_4/task-4-1/public/");     
   }
 }
 
