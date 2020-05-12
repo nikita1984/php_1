@@ -1,21 +1,9 @@
 <?php
-// ToDo Доработать реализацию рендеринга шаблонов через формулы рендеринга
-
 // Подключаем файл с константами и настройками конфигурации
 require __DIR__ . '\..\config\main.php';
 
-
 // Подключаем файлы с функциями
-require ENGINE_DIR . 'getFilePath.php';
-require ENGINE_DIR . 'is_jpg.php';
-require ENGINE_DIR . 'lessThenSize.php';
-require ENGINE_DIR . 'getHTMLElem.php';
-require ENGINE_DIR . 'getGallery.php';
-// require ENGINE_DIR . 'renderingFunctions.php';
-
-// Определяем переменные для построения шаблона
-$gallery = getGallery(IMAGES_DIR);
-$form_title = "Загрузка файлов";
+requireFunctions(scandir(ENGINE_DIR));
 
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
   if(isset($_FILES['my_file'])) {
@@ -36,4 +24,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
   }
 }
 
-include LAYOUTS_DIR . "main.php";
+// Подгружаем подшаблоны
+$gallery = renderTemplate(TEMPLATES_DIR . 'gallery');
+$uploadForm = renderTemplate(TEMPLATES_DIR . 'upload_form');
+
+// Загружаем шаблон страницы
+echo renderTemplate(LAYOUTS_DIR . 'main', $gallery, $uploadForm);

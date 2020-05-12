@@ -6,7 +6,7 @@ function getHTMLElem($arr){
             $file = getFilePath($item);
             $fileSizes = 20000;
             if (is_jpg($file) && lessThenSize($file, $fileSizes)) {
-                $gallery .= "<a href=\"{$file}\" target=\"_blank\"><img class=\"miniIMG\" src=\"{$file}\" alt=\"Картинка1\"></a>";   
+                $gallery .= "<a href=\"{$file}\" target=\"_blank\"><img class=\"miniIMG\" src=\"{$file}\" alt=\"Картинка галереи\"></a>";   
             }         
         }    
     };
