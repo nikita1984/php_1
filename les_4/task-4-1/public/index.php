@@ -24,9 +24,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
   }
 }
 
-// Подгружаем подшаблоны
-$gallery = renderTemplate(TEMPLATES_DIR . 'gallery');
-$uploadForm = renderTemplate(TEMPLATES_DIR . 'upload_form');
+// Отрисовываем страницу
+echo render();
 
-// Загружаем шаблон страницы
-echo renderTemplate(LAYOUTS_DIR . 'main', $gallery, $uploadForm);
+
+
