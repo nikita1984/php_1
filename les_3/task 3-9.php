@@ -7,26 +7,25 @@
 // Объявим функцию
 /** Функция транслитерации строки
  * @param {string} $inputString - входная строка для дальнейшего преобразования
- * @param {array} $alphabet - массив с ключами преобразования
+ * @param {array} $dictionary - массив с ключами преобразования
  * @return {string} $outputString - исходная строка результатом преобразования
  */
-function transliteration($inputString, $alphabet)
+
+function transliteration($inputString, $dictionary)
 {
     $outputString = '';
-    if (is_string($inputString) && is_array($alphabet)) {
+    if (is_string($inputString)) {
         for ($i = 0; $i < mb_strlen($inputString); $i++) {
-            if (is_null($alphabet[mb_strtolower(mb_substr($inputString, $i, 1))])) {
-                $outputString .= '_';
-            } else {
-                $outputString .= $alphabet[mb_strtolower(mb_substr($inputString, $i, 1))];
-            }
+            if (key_exists(mb_strtolower(mb_substr($inputString, $i, 1)), $dictionary)) {
+                $outputString .= $dictionary[mb_strtolower(mb_substr($inputString, $i, 1))];
+            }         
         }
     }
     return $outputString;
 }
 
 // Объявим массив с ключами преобразования и входную строку
-$alphabet = [
+$dictionary = [
     'а' => 'a', 'б' => 'b', 'в' => 'v',
     'г' => 'g', 'д' => 'd', 'е' => 'e',
     'ё' => 'e', 'ж' => 'zh', 'з' => 'z',
@@ -37,9 +36,10 @@ $alphabet = [
     'ф' => 'f', 'х' => 'h', 'ц' => 'c',
     'ч' => 'ch', 'ш' => 'sh', 'щ' => 'sch',
     'ь' => '\'', 'ы' => 'y', 'ъ' => '\'',
-    'э' => 'e', 'ю' => 'yu', 'я' => 'ya'
+    'э' => 'e', 'ю' => 'yu', 'я' => 'ya', ' ' => '_'
 ];
+
 $inputText = 'Привет мир';
 
 // Осуществим вывод
-echo transliteration($inputText, $alphabet);
+echo transliteration($inputText, $dictionary);
