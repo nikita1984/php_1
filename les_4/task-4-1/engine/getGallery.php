@@ -11,7 +11,7 @@ function getGallery (string $directoryPath) : string {
             $file = getFilePath($item);
             $fileSizes = 20000;
             if (isJPG($file) && lessThenSize($file, $fileSizes)) {
-                array_push($a, $item);
+                array_push($a, $file);
             }
         }
     };
