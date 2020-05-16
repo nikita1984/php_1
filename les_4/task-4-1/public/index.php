@@ -13,7 +13,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
           mkdir(IMAGES_DIR);
       }
       $file = $_FILES['my_file']['tmp_name'];
-      if ((is_jpg($file) && lessThenSize($file, DOWNLOAD_FILE_SIZE))) {
+      if ((isJPG($file) && lessThenSize($file, DOWNLOAD_FILE_SIZE))) {
         move_uploaded_file(
           $file,
           IMAGES_DIR . $_FILES['my_file']['name']

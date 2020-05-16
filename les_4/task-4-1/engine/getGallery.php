@@ -4,6 +4,16 @@
  * @return string HTML-код блока галереи
  */
 function getGallery (string $directoryPath) : string {
-    $directoryList = scandir($directoryPath);    
-    return getHTMLElem($directoryList);
+    $a = [];
+    foreach (scandir($directoryPath) as $item) {
+
+        if (!is_dir($item)){
+            $file = getFilePath($item);
+            $fileSizes = 20000;
+            if (isJPG($file) && lessThenSize($file, $fileSizes)) {
+                array_push($a, $item);
+            }
+        }
+    };
+    return getHTMLElem($a);
 };
