@@ -2,7 +2,7 @@
 /**
  * Рендеринг низкоуровневых шаблонов
  * @page {string} наименование файла с шаблоном (без расширения)
- * @return {string} шаблон для вставки в переменную высокоуровневого шаблона
+ * @return string шаблон для вставки в переменную высокоуровневого шаблона
  */
 function renderTemplate($page, $params = [])
 {
@@ -28,7 +28,7 @@ function renderTemplate($page, $params = [])
   
 /**
  * Рендеринг высокоуровневого шаблона
- * @return {HTML-string} отрисованная HTML-страница
+ * @return string - отрисованная HTML-страница
  */
 function render()
 {
