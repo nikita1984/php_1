@@ -5,7 +5,7 @@
  */
 function getFilePath (string $fileName) : string {
     $filePath = '';
-    $filePath .= './images/';
+    $filePath .= './images/small/';
     $filePath .= $fileName;
     return $filePath;
 }
