@@ -2,7 +2,7 @@
 $form_title = "Загрузка файлов";
 
 downLoadUserFile();
-
+// В случае несоответствия требования к загружаемому файлу, формируем переменную с текстом ошибки
 if (!downLoadUserFile()  && !is_null(downLoadUserFile())){
     $fileSize = DOWNLOAD_FILE_SIZE;
     $errorText = "Не соблюдены требования к загружаемому файлу: Разрешение jpeg, размер не более {$fileSize} kB";

@@ -1,7 +1,7 @@
 <?php
-/** конструирует путь до файла в директории с изображениями /images/
+/** Конструирует путь до файла в директории с миниатюрами /images/small
  * @param $fileName - имя файла в папке images
- * @return string - возвращает путь до файла в директории с изображениями /images/
+ * @return string - возвращает путь до файла в директории с изображениями /images/small
  */
 function getFilePath (string $fileName) : string {
     $filePath = '';
