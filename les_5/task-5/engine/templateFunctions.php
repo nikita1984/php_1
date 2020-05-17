@@ -34,9 +34,14 @@ function render()
     return renderTemplate(LAYOUTS_DIR . 'main',
         [
             'gallery' => renderTemplate(TEMPLATES_DIR . 'gallery'),
-            'uploadForm' => renderTemplate(TEMPLATES_DIR . 'upload_form')            
+            // 'uploadForm' => renderTemplate(TEMPLATES_DIR . 'upload_form')
         ]
     );
 }
 
+function renderImage($imageFile){
+    return renderTemplate(LAYOUTS_DIR . 'image', [
+        "gallery" => getFilePath ($imageFile, 'big')
+    ]);
+}
 

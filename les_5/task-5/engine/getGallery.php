@@ -8,9 +8,10 @@ function getGallery (string $directoryPath) : array {
     foreach (scandir($directoryPath) as $item) {
         if (!is_dir($item)){
             $file = [
-                "small" => getSmallFilePath($item),
-                "big" => getBigFilePath($item),
-                "alt" => "$item"
+                "small" => getFilePath($item, 'small'),
+                "big" => getFilePath($item, 'big'),
+                "alt" => "$item",
+                "href" => str_replace('jpg', 'php', $item)
             ];
             $fileSizes = DOWNLOAD_FILE_SIZE;
             if (isJPG($file["big"]) && lessThenSize($file["big"], $fileSizes)) {
