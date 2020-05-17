@@ -11,6 +11,8 @@
  ***********************************************************************************/
 
 function img_resize($src, $dest, $width, $height, $rgb = 0xFFFFFF, $quality = 100) {
+    var_dump($src);
+    var_dump($dest);
   if (!file_exists($src)) return false;
 
   $size = getimagesize($src);
@@ -46,6 +48,8 @@ function img_resize($src, $dest, $width, $height, $rgb = 0xFFFFFF, $quality = 10
 
   imagedestroy($isrc);
   imagedestroy($idest);
+
+
 
   return true;
 }
