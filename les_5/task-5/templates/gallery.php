@@ -9,7 +9,7 @@ $gallery = getGallery($host, $SQLLogin, $pwd, $db, $sql);
 <div class="gallery">
     <? foreach ($gallery as $item): ?>
         <figure>
-            <a href="<?=$item["href"]?>" target="_blank">
+            <a href="<?=$item["href"]?>">
                 <img class="miniIMG" src="<?=$item["smallImagePath"]?>" alt="<?=$item["name"]?>">
             </a>
             <figcaption>Просмотры: <?=$item["view"]?> </figcaption>

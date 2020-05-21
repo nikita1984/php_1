@@ -39,9 +39,16 @@ function render()
     );
 }
 
-function renderImage($imageFile){
-    return renderTemplate(LAYOUTS_DIR . 'image', [
-        "gallery" => getFilePath ($imageFile, 'big')
-    ]);
+function renderImage($imageFile, $imageView){
+    return renderTemplate(LAYOUTS_DIR . 'main', [
+        'gallery' => renderTemplate(TEMPLATES_DIR . 'imagePage',
+        [
+            'gallery' => getFilePath ($imageFile, 'big'),
+            'imageName' => $imageFile,
+            'imageView' => $imageView
+        ]
+        ),
+    ]
+    );
 }
 
