@@ -7,9 +7,12 @@ $sql = 'SELECT * from gallerytable';
 $gallery = getGallery($host, $SQLLogin, $pwd, $db, $sql);
 ?>
 <div class="gallery">
-    <? foreach ($gallery as $key => $item): ?>
-        <a href="<?=$item["href"]?>" target="_blank">
-            <img class="miniIMG" src="<?=$item["smallImagePath"]?>" alt="<?=$item["name"]?>">
-        </a>
+    <? foreach ($gallery as $item): ?>
+        <figure>
+            <a href="<?=$item["href"]?>" target="_blank">
+                <img class="miniIMG" src="<?=$item["smallImagePath"]?>" alt="<?=$item["name"]?>">
+            </a>
+            <figcaption>Просмотры: <?=$item["view"]?> </figcaption>
+        </figure>
     <? endforeach; ?>
 </div>
