@@ -1,15 +1,11 @@
 <?php
-$host = '127.0.0.1:3306';
-$SQLLogin = 'admin';
-$pwd = 'admin';
-$db = 'gallery';
-$sql = 'SELECT * from gallerytable';
-$gallery = getGallery($host, $SQLLogin, $pwd, $db, $sql);
+$sql = 'SELECT * FROM gallerytable ORDER BY view';
+$gallery = getGallery(SQL_HOST, SQL_LOGIN, SQL_PWD, SQL_DB, $sql);
 ?>
 <div class="gallery">
     <? foreach ($gallery as $item): ?>
         <figure>
-            <a href="<?=$item["href"]?>">
+            <a href="./photo.php?id=<?=$item["id"]?>">
                 <img class="miniIMG" src="<?=$item["smallImagePath"]?>" alt="<?=$item["name"]?>">
             </a>
             <figcaption>Просмотры: <?=$item["view"]?> </figcaption>

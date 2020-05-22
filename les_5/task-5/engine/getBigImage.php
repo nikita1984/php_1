@@ -1,5 +1,6 @@
 <?php
-/** Возвращает массив с параметрами галереи для вставки в HTML-код
+/** Возвращает массив с параметром крупного изображения галереи для вставки в HTML-код
+ * и отправляем запрос на увеличение счётчика просмотров
  * @param $host - адрес хоста на котором расположена БД
  * @param $login - логин, под которым заходим в БД
  * @param  $pwd - пароль к логину, под которым заходим в БД
@@ -7,7 +8,7 @@
  * @param $sql - SQL-запрос
  * @return array массив с параметрами галереи для вставки в HTML-код
  */
-function getGallery (string $host, string $login, string $pwd, string $db, string $sql) {
+function getBigImage (string $host, string $login, string $pwd, string $db, string $sql) {
 
     $link = mysqli_connect($host, $login, $pwd, $db);
     if (!$link) {
@@ -23,7 +24,17 @@ function getGallery (string $host, string $login, string $pwd, string $db, strin
         exit;
     }
 
-    $output = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    $output = mysqli_fetch_array($result, MYSQLI_ASSOC);
+
+    // Отправляем запрос в БД на увеличение счетчика просмотров
+    $imageView = (int) $output['view'] + 1;
+    $id = (int) $output['id'];
+    if ($imageView = (int) $imageView) {
+        $sql = "UPDATE gallerytable SET view = $imageView WHERE id = $id ";
+        mysqli_query($link, $sql);
+    }
+
     mysqli_close($link);
+
     return $output;
 }

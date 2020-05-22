@@ -29,7 +29,7 @@ function renderTemplate($page, $params = [])
  * Рендеринг высокоуровневого шаблона
  * @return string - отрисованная HTML-страница
  */
-function render()
+function renderGalleryPage()
 {
     return renderTemplate(LAYOUTS_DIR . 'main',
         [
@@ -39,12 +39,12 @@ function render()
     );
 }
 
-function renderImage($imageFile, $imageView){
+function renderImagePage($imageFile, $imageView){
     return renderTemplate(LAYOUTS_DIR . 'main', [
         'gallery' => renderTemplate(TEMPLATES_DIR . 'imagePage',
         [
             'gallery' => getFilePath ($imageFile, 'big'),
-            'imageName' => $imageFile,
+            'imageTitle' => $imageFile,
             'imageView' => $imageView
         ]
         ),

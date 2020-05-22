@@ -7,7 +7,8 @@ require __DIR__ . '\..\config\main.php';
 // Подключаем файлы с функциями
 requireFunctions(scandir(ENGINE_DIR));
 
-echo render();
+// отрисовываем страницу галереи
+echo renderGalleryPage();
 
 
 
