@@ -30,8 +30,9 @@ function getBigImage (string $host, string $login, string $pwd, string $db, stri
     $imageView = (int) $output['view'] + 1;
     $id = (int) $output['id'];
     if ($imageView = (int) $imageView) {
-        $sql = "UPDATE gallerytable SET view = $imageView WHERE id = $id ";
+        $sql = "UPDATE gallerytable SET view = view + 1 WHERE id = $id ";
         mysqli_query($link, $sql);
+        $imageView = $imageView + 1;
     }
 
     mysqli_close($link);
