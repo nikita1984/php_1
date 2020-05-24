@@ -14,13 +14,11 @@ function downLoadUserFile () {
             $file = $_FILES['my_file']['tmp_name'];
             if (file_exists($file)) {
                 if ((isJPG($file) && lessThenSize($file, DOWNLOAD_FILE_SIZE))) {
-                    getGalleryImage ($file);
+                    getDownloadImage ($file);
+                    header("Location: /les_5/task-5/public/");
                 } else {
                     return false;
                 }
-            } else {
-                // в случае отправки пустого содержания производим перезагрузку страницы
-                header("Location: /les_5/task-5/public/");
             }
         }
     }
