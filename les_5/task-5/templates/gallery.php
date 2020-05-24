@@ -1,11 +1,7 @@
 <?php
 $sql = 'SELECT * FROM gallerytable ORDER BY view';
-$dbConfig = include CONFIG_DIR . 'db.php';
-$gallery = getGallery($dbConfig['host'],
-                        $dbConfig['login'],
-                        $dbConfig['password'],
-                        $dbConfig['dbName'],
-                        $sql);
+$gallery = queryAll($sql, 'All');
+closeConnection ();
 ?>
 <div class="gallery">
     <? foreach ($gallery as $item): ?>
