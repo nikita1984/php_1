@@ -13,7 +13,14 @@ $id = (int) $_GET['id'];
 if ($id = (int) $_GET['id']) {
     $sql = "SELECT * from gallerytable WHERE id = $id";
 }
-$gallery = getBigImage(SQL_HOST, SQL_LOGIN, SQL_PWD, SQL_DB, $sql);
+
+$dbConfig = include CONFIG_DIR . 'db.php';
+$gallery = getBigImage($dbConfig['host'],
+    $dbConfig['login'],
+    $dbConfig['password'],
+    $dbConfig['dbName'],
+    $sql);
+// $gallery = getBigImage(SQL_HOST, SQL_LOGIN, SQL_PWD, SQL_DB, $sql);
 $imageFile = $gallery['name'];
 $imageView = (int) $gallery['view'] + 1;
 
