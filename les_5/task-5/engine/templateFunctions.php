@@ -29,13 +29,13 @@ function renderTemplate($page, $params = [])
  * Рендеринг высокоуровневого шаблона
  * @return string - отрисованная HTML-страница
  */
-function renderGalleryPage(string $uploadFormTitle, string $errorText)
+function renderGalleryPage(string $errorText)
 {
     return renderTemplate(LAYOUTS_DIR . 'main',
         [
             'gallery' => renderTemplate(TEMPLATES_DIR . 'gallery'),
             'uploadForm' => renderTemplate(TEMPLATES_DIR . 'upload_form', [
-                'form_title' => $uploadFormTitle,
+                // 'form_title' => $uploadFormTitle,
                 'errorText' => $errorText
             ])
         ]

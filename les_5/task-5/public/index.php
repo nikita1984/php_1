@@ -7,18 +7,36 @@ require __DIR__ . '\..\config\main.php';
 // Подключаем файлы с функциями
 requireFunctions(scandir(ENGINE_DIR));
 
-// Механизм логики при загрузке файла
-downLoadUserFile ();
-
-// В случае несоответствия требования к загружаемому файлу, формируем переменную с текстом ошибки
-if (!downLoadUserFile()  && !is_null(downLoadUserFile())){
-    $fileSize = DOWNLOAD_FILE_SIZE;
-    $errorText = "Не соблюдены требования к загружаемому файлу: Разрешение jpeg, размер не более {$fileSize} kB";
-} else {
-    $errorText = "";
-}
+// Прописываем механизм логики при загрузке файла
 $uploadFormTitle = "Загрузка файлов";
-echo renderGalleryPage($uploadFormTitle, $errorText);
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if (isset($_FILES['my_file'])) {
+        if (!file_exists(BIG_IMAGES_DIR)) {
+            mkdir(BIG_IMAGES_DIR);
+        }
+        $file = $_FILES['my_file']['tmp_name'];
+        if (file_exists($file)) {
+            if ((isJPG($file) && lessThenSize($file, DOWNLOAD_FILE_SIZE))) {
+                getDownloadImage($file);
+                header("Location: /les_5/task-5/public/");
+            } else {
+                // $uploadFormTitle = "Загрузка файлов";
+                $fileSize = DOWNLOAD_FILE_SIZE;
+                $errorText = "Не соблюдены требования к загружаемому файлу: Разрешение jpeg, размер не более {$fileSize} kB";
+                echo renderGalleryPage($errorText);
+                //ToDo: реализовать корректный редирект страницы header("Location: /les_5/task-5/public/");
+            }
+        } else {
+            header("Location: /les_5/task-5/public/");
+        }
+    }
+} else {
+    $uploadFormTitle = "Загрузка файлов";
+    $errorText = "";
+    echo renderGalleryPage($errorText);
+}
+
+
 
 
 
