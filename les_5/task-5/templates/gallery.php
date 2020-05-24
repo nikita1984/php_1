@@ -1,6 +1,6 @@
 <?php
 $sql = 'SELECT * FROM gallerytable ORDER BY view';
-$gallery = queryAll($sql, 'All');
+$gallery = SQLQuery($sql, 'All');
 closeConnection ();
 ?>
 <div class="gallery">

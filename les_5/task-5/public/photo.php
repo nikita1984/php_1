@@ -11,18 +11,12 @@ requireFunctions(scandir(ENGINE_DIR));
 // В зависимости от переданного запроса на страницу определяем параметры для функции отрисовки страницы
 $id = (int) $_GET['id'];
 if ($id = (int) $_GET['id']) {
+    $sql = "UPDATE gallerytable SET view = view + 1 WHERE id = $id ";
+    SQLQuery($sql);
     $sql = "SELECT * from gallerytable WHERE id = $id";
+    $image = SQLQuery($sql, 'Array');
+    closeConnection ();
 }
 
-$dbConfig = include CONFIG_DIR . 'db.php';
-$gallery = getBigImage($dbConfig['host'],
-    $dbConfig['login'],
-    $dbConfig['password'],
-    $dbConfig['dbName'],
-    $sql);
-// $gallery = getBigImage(SQL_HOST, SQL_LOGIN, SQL_PWD, SQL_DB, $sql);
-$imageFile = $gallery['name'];
-$imageView = (int) $gallery['view'] + 1;
-
 // Отрисовываем страницу
-echo renderImagePage($imageFile, $imageView);
+echo renderImagePage($image['name'], $image['view']);
