@@ -14,6 +14,7 @@ function getGalleryImage (string $file) {
     $width = 108;
     $height = 158;
     img_resize($src, $dest, $width, $height, $rgb = 0xFFFFFF, $quality = 100);
+    //ToDO: Реализовать добавление в БД параметров нового файла
     header("Location: /les_5/task-5/public/");
 }
 
