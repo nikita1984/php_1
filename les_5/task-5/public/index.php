@@ -1,6 +1,6 @@
 <?php
 // Устанавливаем "строгий" режим
-declare(strict_types = 1);
+declare(strict_types=1);
 // Подключаем файл с константами и настройками конфигурации
 require __DIR__ . '\..\config\main.php';
 
@@ -8,7 +8,6 @@ require __DIR__ . '\..\config\main.php';
 requireFunctions(scandir(ENGINE_DIR));
 
 // Прописываем механизм логики при загрузке файла
-$uploadFormTitle = "Загрузка файлов";
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_FILES['my_file'])) {
         if (!file_exists(BIG_IMAGES_DIR)) {
@@ -20,9 +19,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 getDownloadImage($file);
                 header("Location: /les_5/task-5/public/");
             } else {
-                // $uploadFormTitle = "Загрузка файлов";
                 $fileSize = DOWNLOAD_FILE_SIZE;
-                $errorText = "Не соблюдены требования к загружаемому файлу: Разрешение jpeg, размер не более {$fileSize} kB";
+                $errorText = "Не соблюдены требования к загружаемому файлу: 
+                                Разрешение jpeg, размер не более {$fileSize} kB";
                 echo renderGalleryPage($errorText);
                 //ToDo: реализовать корректный редирект страницы header("Location: /les_5/task-5/public/");
             }
@@ -31,9 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 } else {
-    $uploadFormTitle = "Загрузка файлов";
-    $errorText = "";
-    echo renderGalleryPage($errorText);
+    echo renderGalleryPage();
 }
 
 

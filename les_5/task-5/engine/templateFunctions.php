@@ -24,12 +24,12 @@ function renderTemplate($page, $params = [])
 
     return ob_get_clean(); // возвращаем содержимое буфера памяти, затем очищаем его
 }
-  
+
 /**
  * Рендеринг высокоуровневого шаблона
  * @return string - отрисованная HTML-страница
  */
-function renderGalleryPage(string $errorText)
+function renderGalleryPage(string $errorText = "")
 {
     return renderTemplate(LAYOUTS_DIR . 'main',
         [
@@ -42,16 +42,17 @@ function renderGalleryPage(string $errorText)
     );
 }
 
-function renderImagePage($imageFile, $imageView){
+function renderImagePage($imageFile, $imageView)
+{
     return renderTemplate(LAYOUTS_DIR . 'main', [
-        'gallery' => renderTemplate(TEMPLATES_DIR . 'imagePage',
-        [
-            'gallery' => getFilePath ($imageFile, 'big'),
-            'imageTitle' => $imageFile,
-            'imageView' => $imageView
+            'gallery' => renderTemplate(TEMPLATES_DIR . 'imagePage',
+                [
+                    'gallery' => getFilePath($imageFile, 'big'),
+                    'imageTitle' => $imageFile,
+                    'imageView' => $imageView
+                ]
+            ),
         ]
-        ),
-    ]
     );
 }
 

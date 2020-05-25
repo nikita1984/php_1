@@ -3,7 +3,8 @@
  * @param  $filename - имя проверяемого файла
  * @return bool в случае соответствия
  */
-function isJPG(string $filename) : bool {
-      return (exif_imagetype ($filename) === 2);
+function isJPG(string $filename): bool
+{
+    return (exif_imagetype($filename) === 2);
 }
 
