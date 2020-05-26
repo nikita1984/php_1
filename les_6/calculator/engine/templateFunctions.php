@@ -29,11 +29,14 @@ function renderTemplate($page, $params = [])
  * Рендеринг высокоуровневого шаблона
  * @return string - отрисованная HTML-страница
  */
-function renderPage()
+function renderPage($resultText = '')
 {
     return renderTemplate(LAYOUTS_DIR . 'main',
         [
-            'content' => renderTemplate(TEMPLATES_DIR . 'calculator_form')
+            'content' => renderTemplate(TEMPLATES_DIR . 'calculator_form',
+                [
+                    'resultText' => $resultText
+                ])
         ]
     );
 }

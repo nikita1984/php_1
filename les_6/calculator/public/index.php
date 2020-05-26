@@ -9,7 +9,12 @@ requireFunctions(scandir(ENGINE_DIR));
 
 // Прописываем механизм логики при загрузке файла
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    echo 'действие произведено';
+    $result = mathOperation(
+        (int) $_POST['arg1'],
+        (int) $_POST['arg2'],
+        (string) $_POST['operation']);
+    $resultText = 'Результат операции: ' . $result;
+    echo renderPage($resultText);
 } else {
     echo renderPage();
 }
