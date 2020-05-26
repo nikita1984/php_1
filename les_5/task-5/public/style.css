@@ -1,0 +1,8 @@
+.miniIMG {
+    margin-right: 25px;
+}
+
+.gallery {
+	display: flex;
+	justify-content: center;
+}
