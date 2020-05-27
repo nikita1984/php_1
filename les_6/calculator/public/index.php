@@ -16,6 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $resultText = 'Результат операции: ' . $result;
     echo renderPage($resultText);
 } else {
+    // При отсутствии запросов просто отрисовываем страницу
     echo renderPage();
 }
 
