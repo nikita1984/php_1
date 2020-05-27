@@ -17,6 +17,8 @@ function getDownloadImage (string $file) {
     $height = 158;
     img_resize($src, $dest, $width, $height, $rgb = 0xFFFFFF, $quality = 100);
 
+    //ToDo: Определить механизм создания нового файла с комментариями для добавляемого изображения
+
     // Отправляем сведения о загруженном файле в БД
     $bigImagePath = './images/big/' . $uploadFile;
     $bigImagePath = mysqli_real_escape_string(getConnection (), $bigImagePath);

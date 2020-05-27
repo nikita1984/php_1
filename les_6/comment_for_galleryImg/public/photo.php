@@ -20,9 +20,9 @@ if ($id = (int)$_GET['id']) {
 
 if (!empty($_POST)) {
     $writeString = (string)$_POST['commentText'] . "<br>" . "\n";
-    $filename = COMMENTS_IMAGES_DIR . '3.php';
+    $filename = COMMENTS_IMAGES_DIR . "{$id}" . '.php';
     $openFile = fopen($filename, 'ab');
     fwrite($openFile, $writeString);
     fclose($openFile);
 }
-echo renderImagePage($image['name'], $image['view']);
+echo renderImagePage($image['name'], $image['view'], $id);

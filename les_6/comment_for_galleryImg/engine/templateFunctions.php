@@ -42,7 +42,7 @@ function renderGalleryPage(string $errorText = "")
     );
 }
 
-function renderImagePage($imageFile, $imageView)
+function renderImagePage($imageFile, $imageView, $commentsTemplate)
 {
     return renderTemplate(LAYOUTS_DIR . 'main', [
             'gallery' => renderTemplate(TEMPLATES_DIR . 'imagePage',
@@ -50,7 +50,7 @@ function renderImagePage($imageFile, $imageView)
                     'gallery' => getFilePath($imageFile, 'big'),
                     'imageTitle' => $imageFile,
                     'imageView' => $imageView,
-                    'comments' => renderTemplate(COMMENTS_IMAGES_DIR . '3')
+                    'comments' => renderTemplate(COMMENTS_IMAGES_DIR . $commentsTemplate)
                 ]
             ),
         ]
