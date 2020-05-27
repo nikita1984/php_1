@@ -18,11 +18,11 @@ if ($id = (int)$_GET['id']) {
     closeConnection();
 }
 
-if  (!empty($_POST)) {
-   var_dump($_POST);
-} else {
-    echo renderImagePage($image['name'], $image['view']);
+if (!empty($_POST)) {
+    $writeString = (string)$_POST['commentText'] . "<br>" . "\n";
+    $filename = COMMENTS_IMAGES_DIR . '3.php';
+    $openFile = fopen($filename, 'ab');
+    fwrite($openFile, $writeString);
+    fclose($openFile);
 }
-$a = include COMMENTS_IMAGES_DIR . '3.php';
-
-
+echo renderImagePage($image['name'], $image['view']);

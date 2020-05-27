@@ -49,11 +49,10 @@ function renderImagePage($imageFile, $imageView)
                 [
                     'gallery' => getFilePath($imageFile, 'big'),
                     'imageTitle' => $imageFile,
-                    'imageView' => $imageView
+                    'imageView' => $imageView,
+                    'comments' => renderTemplate(COMMENTS_IMAGES_DIR . '3')
                 ]
             ),
-            // 'uploadForm' => renderTemplate(TEMPLATES_DIR . 'upload_comments',
-            // 'content' => renderTemplate(TEMPLATES_DIR . 'commentsList')
         ]
     );
 }

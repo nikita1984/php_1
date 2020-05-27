@@ -14,3 +14,6 @@
     </div>
 </form>
 <h2 class="gallery">Отзывы</h2>
+<div class="gallery">
+    <?= $comments ?>
+</div>
