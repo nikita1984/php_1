@@ -18,11 +18,11 @@ if ($id = (int)$_GET['id']) {
     closeConnection();
 }
 
-if (!empty($_POST)) {
-    $writeString = (string)$_POST['commentText'] . "<br>" . "\n";
+// При отправке комментария записываем его в целевой файл хранилища комментариев
+if (!empty($_POST['commentText']) && is_string($_POST['commentText'])) {
+    $writeString = $_POST['commentText'] . "<br>" . "\n";
     $filename = COMMENTS_IMAGES_DIR . "{$id}" . '.php';
-    $openFile = fopen($filename, 'ab');
-    fwrite($openFile, $writeString);
-    fclose($openFile);
+    writeStringInFile($filename, $writeString);
 }
+
 echo renderImagePage($image['name'], $image['view'], $id);
