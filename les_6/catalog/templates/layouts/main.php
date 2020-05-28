@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Single-Page</title>
+    <title>Catalog</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
           integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
@@ -74,28 +74,28 @@
                                     </div>
                                 </a>
                                 <div class="sh__action"><a href="#" class="action"><i
-                                        class="far fa-times-circle"></i></a></div>
+                                                class="far fa-times-circle"></i></a></div>
 
                             </div>
                             <div class="product-in-sc"><a href="single-page.htm" style="float: left; width: 240px;">
-                                <div class="product-in-sc-img" style="background-image: url(img/sc_img2.jpg)">
-                                </div>
-
-                                <div class="product-in-sc-desc">
-                                    <h3 class="h3-sc-name">Rebox Zane</h3>
-                                    <div class="sc-rating">
-                                        <i class="fas fa-star rat"></i>
-                                        <i class="fas fa-star rat"></i>
-                                        <i class="fas fa-star rat"></i>
-                                        <i class="fas fa-star rat"></i>
-                                        <i class="fas fa-star rat"></i>
+                                    <div class="product-in-sc-img" style="background-image: url(img/sc_img2.jpg)">
                                     </div>
-                                    <div class="sc-count">1&nbsp;x $250</div>
 
-                                </div>
-                            </a>
+                                    <div class="product-in-sc-desc">
+                                        <h3 class="h3-sc-name">Rebox Zane</h3>
+                                        <div class="sc-rating">
+                                            <i class="fas fa-star rat"></i>
+                                            <i class="fas fa-star rat"></i>
+                                            <i class="fas fa-star rat"></i>
+                                            <i class="fas fa-star rat"></i>
+                                            <i class="fas fa-star rat"></i>
+                                        </div>
+                                        <div class="sc-count">1&nbsp;x $250</div>
+
+                                    </div>
+                                </a>
                                 <div class="sh__action"><a href="#" class="action"><i
-                                        class="far fa-times-circle"></i></a></div>
+                                                class="far fa-times-circle"></i></a></div>
                             </div>
                             <div class="total">
                                 <div>total</div>
@@ -155,7 +155,7 @@
                                 <li><a href="catalog.htm" class="drop-link">Jackets/Coats</a></li>
                             </ul>
                             <div class="drop-flex-img"><a href="catalog.htm" class="drop-super-sale">Super
-                                sale!</a>
+                                    sale!</a>
                             </div>
                         </div>
                     </div>
@@ -200,7 +200,7 @@
                                 <li><a href="catalog.htm" class="drop-link">Jackets/Coats</a></li>
                             </ul>
                             <div class="drop-flex-img"><a href="catalog.htm" class="drop-super-sale">Super
-                                sale!</a>
+                                    sale!</a>
                             </div>
                         </div>
                     </div>
@@ -245,7 +245,7 @@
                                 <li><a href="catalog.htm" class="drop-link">Jackets/Coats</a></li>
                             </ul>
                             <div class="drop-flex-img"><a href="catalog.htm" class="drop-super-sale">Super
-                                sale!</a>
+                                    sale!</a>
                             </div>
                         </div>
                     </div>
@@ -290,7 +290,7 @@
                                 <li><a href="catalog.htm" class="drop-link">Jackets/Coats</a></li>
                             </ul>
                             <div class="drop-flex-img"><a href="catalog.htm" class="drop-super-sale">Super
-                                sale!</a>
+                                    sale!</a>
                             </div>
                         </div>
                     </div>
@@ -335,7 +335,7 @@
                                 <li><a href="catalog.htm" class="drop-link">Jackets/Coats</a></li>
                             </ul>
                             <div class="drop-flex-img"><a href="catalog.htm" class="drop-super-sale">Super
-                                sale!</a>
+                                    sale!</a>
                             </div>
                         </div>
                     </div>
@@ -380,7 +380,7 @@
                                 <li><a href="catalog.htm" class="drop-link">Jackets/Coats</a></li>
                             </ul>
                             <div class="drop-flex-img"><a href="catalog.htm" class="drop-super-sale">Super
-                                sale!</a>
+                                    sale!</a>
                             </div>
                         </div>
                     </div>
@@ -402,140 +402,344 @@
             </div>
         </section>
         <!--BREADCRUMBS-->
-        <!--SINGLE PAGE PANEL-->
-        <div class="single-page" style="background-image: url(img/Layer_42.jpg)">
-            <a href="#" class="arrow">
-                <div class="angle"><i class="fas fa-angle-left"></i></div>
-            </a>
-            <a href="#" class="arrow">
-                <div class="angle"><i class="fas fa-angle-right"></i></div>
-            </a>
-        </div>
-        <!--SINGLE PAGE PANEL-->
-        <!--SINGLE PAGE DESCRIPTION-->
-        <div class="product-description container">
-            <div class="product-desc__wrapper">
-                <div class="desc-head">WOMEN COLLECTION
-                    <div class="border-bottom"></div>
-                </div>
-                <div class="product-description-name">Moschino Cheap And Chic</div>
-                <div class="product-description-rating">
-                    <i class="fas fa-star rat"></i>
-                    <i class="fas fa-star rat"></i>
-                    <i class="fas fa-star rat"></i>
-                    <i class="fas fa-star rat"></i>
-                    <i class="fas fa-star rat"></i>
-                </div>
-                <div class="product-description-desc">Compellingly actualize fully researched processes before proactive
-                    outsourcing. Progressively syndicate collaborative architectures before cutting-edge services.
-                    Completely
-                    visualize parallel core competencies rather than exceptional portals.
-                </div>
-                <div class="product-description-info">
-                    <div><span class="desc-info-name">MATERIAL:</span> COTTON</div>
-                    <div><span class="desc-info-name">DESIGNER:</span> BINBURHAN</div>
-                </div>
-                <div class="desc-info-price">$561</div>
-                <div class="choose-form">
-                    <div class="form-choose-div"><span class="product-desc-head">CHOOSE COLOR</span><input id="color"
-                                                                                                           list="dl_color"
-                                                                                                           class="color"
-                                                                                                           title="color">
-                        <datalist id="dl_color">
-                            <option label="Red" value="Red"></option>
-                            <option label="Blue" value="Blue"></option>
-                            <option label="Green" value="Green"></option>
-                        </datalist>
-                    </div>
-                    <div class="form-choose-div"><span class="product-desc-head">CHOOSE SIZE</span><input id="size"
-                                                                                                          list="dl_size"
-                                                                                                          class="color"
-                                                                                                          title="size">
-                        <datalist id="dl_size">
-                            <option label="S" value="S"></option>
-                            <option label="M" value="M"></option>
-                            <option label="L" value="L"></option>
-                        </datalist>
-                    </div>
-                    <div class="form-choose-div"><span class="product-desc-head">QUANTITY</span><input type="number"
-                                                                                                       class="number"
-                                                                                                       title="number">
-                    </div>
-                </div>
-                <a href="shopping-card.htm"
-                   class="choose-btn-text">
-                    <div class="choose-btn"><i class="fas fa-shopping-cart qw"></i>Add to&nbsp;Cart</div>
-                </a>
-            </div>
-        </div>
-        <!--SINGLE PAGE DESCRIPTION-->
-        <!--YOU MAY LIKE ALSO BLOCK-->
         <div class="container">
-            <div class="also-header">you may like also</div>
-            <div class="also-flex">
-                <a href="#" class="also-flex-unit">
-                    <div>
-                        <div style="background-image: url(img/single-page/1.jpg);" class="also-flex-img"></div>
-                        <div class="also-unit-name">BLAZE LEGGINGS</div>
-                        <div class="also-flex-price">$52.00</div>
-                        <div class="also-flex-rating">
-                            <i class="fas fa-star rat"></i>
-                            <i class="fas fa-star rat"></i>
-                            <i class="fas fa-star rat"></i>
-                            <i class="fas fa-star rat"></i>
-                            <i class="fas fa-star rat"></i>
+            <!--LEFT-SIDE CATALOG-->
+            <nav class="left-side">
+                <details>
+                    <summary>Category</summary>
+                    <ul>
+                        <li><a href="catalog.htm">Accessories</a></li>
+                        <li><a href="catalog.htm">Bags</a></li>
+                        <li><a href="catalog.htm">Denim</a></li>
+                        <li><a href="catalog.htm">Hoodies &amp;&nbsp;Sweatshirts</a></li>
+                        <li><a href="catalog.htm">Jackets &amp;&nbsp;Coats</a></li>
+                        <li><a href="catalog.htm">Pants</a></li>
+                        <li><a href="catalog.htm">Polos</a></li>
+                        <li><a href="catalog.htm">Shirts</a></li>
+                        <li><a href="catalog.htm">Shoes</a></li>
+                        <li><a href="catalog.htm">Shorts</a></li>
+                        <li><a href="catalog.htm">Sweaters &amp;&nbsp;Knits</a></li>
+                        <li><a href="catalog.htm">T-Shirts</a></li>
+                        <li><a href="catalog.htm">Tanks</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>BRAND</summary>
+                </details>
+                <details>
+                    <summary>DESIGNER</summary>
+                </details>
+            </nav>
+            <!--LEFT-SIDE CATALOG-->
+            <!--RIGHT-SIDE CATALOG-->
+            <section class="right-side">
+                <!--FILTERS-->
+                <div class="top-filter">
+                    <div class="trending">
+                        <h3>Trending now</h3>
+                        <div class="floral">
+                            <a href="catalog.htm">Bohemian</a>&nbsp;| <a href="catalog.htm">Floral</a>&nbsp;| <a
+                                    href="catalog.htm">Lace</a>
+                            <a href="catalog.htm">Floral</a>&nbsp;| <a href="catalog.htm">Lace</a>&nbsp;| <a
+                                    href="catalog.htm">Bohemian</a>
                         </div>
                     </div>
-                </a>
-
-                <a href="#" class="also-flex-unit">
-                    <div>
-                        <div style="background-image: url(img/single-page/2.jpg);" class="also-flex-img"></div>
-                        <div class="also-unit-name">BLAZE LEGGINGS</div>
-                        <div class="also-flex-price">$52.00</div>
-                        <div class="also-flex-rating">
-                            <i class="fas fa-star rat"></i>
-                            <i class="fas fa-star rat"></i>
-                            <i class="fas fa-star rat"></i>
-                            <i class="fas fa-star rat"></i>
-                            <i class="fas fa-star rat"></i>
+                    <div class="size">
+                        <h3>Size</h3>
+                        <div class="size-filter">
+                            <div>
+                                <label for="XXS">
+                                    <input id="XXS" type="checkbox">
+                                    XXS
+                                </label>
+                                <label for="L">
+                                    <input id="L" type="checkbox">
+                                    L
+                                </label>
+                            </div>
+                            <div>
+                                <label for="XS">
+                                    <input id="XS" type="checkbox">
+                                    XS
+                                </label>
+                                <label for="XL">
+                                    <input id="XL" type="checkbox">
+                                    XL
+                                </label>
+                            </div>
+                            <div>
+                                <label for="S">
+                                    <input id="S" type="checkbox">
+                                    S
+                                </label>
+                                <label for="XXL">
+                                    <input id="XXL" type="checkbox">
+                                    XXL
+                                </label>
+                            </div>
+                            <div>
+                                <label for="M">
+                                    <input id="M" type="checkbox">
+                                    M
+                                </label>
+                            </div>
                         </div>
                     </div>
-                </a>
-
-                <a href="#" class="also-flex-unit">
                     <div>
-                        <div style="background-image: url(img/single-page/3.jpg);" class="also-flex-img"></div>
-                        <div class="also-unit-name">BLAZE LEGGINGS</div>
-                        <div class="also-flex-price">$52.00</div>
-                        <div class="also-flex-rating">
-                            <i class="fas fa-star rat"></i>
-                            <i class="fas fa-star rat"></i>
-                            <i class="fas fa-star rat"></i>
-                            <i class="fas fa-star rat"></i>
-                            <i class="fas fa-star rat"></i>
-                        </div>
+                        <h3>Price</h3>
+                        <input type="range" value="10" step="0.1" class="range" title="range">
+                        <div class="min-price">$52</div>
+                        <div class="max-price">$400</div>
                     </div>
-                </a>
-
-                <a href="#" class="also-flex-unit">
-                    <div>
-                        <div style="background-image: url(img/single-page/4.jpg);" class="also-flex-img"></div>
-                        <div class="also-unit-name">BLAZE LEGGINGS</div>
-                        <div class="also-flex-price">$52.00</div>
-                        <div class="also-flex-rating">
-                            <i class="fas fa-star rat"></i>
-                            <i class="fas fa-star rat"></i>
-                            <i class="fas fa-star rat"></i>
-                            <i class="fas fa-star rat"></i>
-                            <i class="fas fa-star rat"></i>
-                        </div>
+                </div>
+                <div class="sort">
+                    <div class="sortby">Sort By</div>
+                    <a href="#">
+                        <div class="sortname">Name <i class="fas fa-caret-down"></i></div>
+                    </a>
+                    <div class="sortby">Show</div>
+                    <a href="#">
+                        <div class="sortname">09 <i class="fas fa-caret-down"></i></div>
+                    </a>
+                </div>
+                <!--FILTERS-->
+                <!--PRODUCT CATALOG-->
+                <div class="product-catalog">
+                    <div class="catalog-flex">
+                        <a href="single-page.htm" class="productUnit">
+                            <div class="unit-img" style="background-image: url(img/catalog-img/1.jpg)"></div>
+                            <div class="unit-text">
+                                <p class="productUnitName">Mango People T-shirt</p>
+                                <div class="procductUnitPrice">$52.00</div>
+                                <div class="rating">
+                                    <i class="fas fa-star rat"></i>
+                                    <i class="fas fa-star rat"></i>
+                                    <i class="fas fa-star rat"></i>
+                                    <i class="fas fa-star rat"></i>
+                                    <i class="fas fa-star rat"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="shopping-card.htm" class="addtocard1">Add to&nbsp;card</a>
+                        <a href="#" class="addtocard2"><i class="far fa-heart"></i></a>
+                        <a href="#" class="addtocard3"><i class="fas fa-retweet"></i></a>
                     </div>
-                </a>
 
+                    <div class="catalog-flex">
+                        <a href="single-page.htm" class="productUnit">
+                            <div class="unit-img" style="background-image: url(img/catalog-img/2.jpg)"></div>
+                            <div class="unit-text">
+                                <p class="productUnitName">Mango People T-shirt</p>
+                                <div class="procductUnitPrice">$52.00</div>
+                                <div class="rating">
+                                    <i class="fas fa-star rat">
+                                    </i>
+                                    <i class="fas fa-star rat"></i>
+                                    <i class="fas fa-star rat"></i>
+                                    <i class="fas fa-star rat"></i>
+                                    <i class="fas fa-star rat"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="shopping-card.htm" class="addtocard1">Add to&nbsp;card</a>
+                        <a href="#" class="addtocard2"><i class="far fa-heart"></i></a>
+                        <a href="#" class="addtocard3"><i class="fas fa-retweet"></i></a>
+                    </div>
+
+                    <div class="catalog-flex">
+                        <a href="single-page.htm" class="productUnit">
+                            <div class="unit-img" style="background-image: url(img/catalog-img/3.jpg)"></div>
+                            <div class="unit-text">
+                                <p class="productUnitName">Mango People T-shirt</p>
+                                <div class="procductUnitPrice">$52.00</div>
+                                <div class="rating">
+                                    <i class="fas fa-star rat">
+                                    </i>
+                                    <i class="fas fa-star rat"></i>
+                                    <i class="fas fa-star rat"></i>
+                                    <i class="fas fa-star rat"></i>
+                                    <i class="fas fa-star rat"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="shopping-card.htm" class="addtocard1">Add to&nbsp;card</a>
+                        <a href="#" class="addtocard2"><i class="far fa-heart"></i></a>
+                        <a href="#" class="addtocard3"><i class="fas fa-retweet"></i></a>
+                    </div>
+
+                    <div class="catalog-flex">
+                        <a href="single-page.htm" class="productUnit">
+                            <div class="unit-img" style="background-image: url(img/catalog-img/4.jpg)"></div>
+                            <div class="unit-text">
+                                <p class="productUnitName">Mango People T-shirt</p>
+                                <div class="procductUnitPrice">$52.00</div>
+                                <div class="rating">
+                                    <i class="fas fa-star rat">
+                                    </i>
+                                    <i class="fas fa-star rat"></i>
+                                    <i class="fas fa-star rat"></i>
+                                    <i class="fas fa-star rat"></i>
+                                    <i class="fas fa-star rat"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="shopping-card.htm" class="addtocard1">Add to&nbsp;card</a>
+                        <a href="#" class="addtocard2"><i class="far fa-heart"></i></a>
+                        <a href="#" class="addtocard3"><i class="fas fa-retweet"></i></a>
+                    </div>
+
+                    <div class="catalog-flex">
+                        <a href="single-page.htm" class="productUnit">
+                            <div class="unit-img" style="background-image: url(img/catalog-img/5.jpg)"></div>
+                            <div class="unit-text">
+                                <p class="productUnitName">Mango People T-shirt</p>
+                                <div class="procductUnitPrice">$52.00</div>
+                                <div class="rating">
+                                    <i class="fas fa-star rat">
+                                    </i>
+                                    <i class="fas fa-star rat"></i>
+                                    <i class="fas fa-star rat"></i>
+                                    <i class="fas fa-star rat"></i>
+                                    <i class="fas fa-star rat"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="shopping-card.htm" class="addtocard1">Add to&nbsp;card</a>
+                        <a href="#" class="addtocard2"><i class="far fa-heart"></i></a>
+                        <a href="#" class="addtocard3"><i class="fas fa-retweet"></i></a>
+                    </div>
+
+                    <div class="catalog-flex">
+                        <a href="single-page.htm" class="productUnit">
+                            <div class="unit-img" style="background-image: url(img/catalog-img/6.jpg)"></div>
+                            <div class="unit-text">
+                                <p class="productUnitName">Mango People T-shirt</p>
+                                <div class="procductUnitPrice">$52.00</div>
+                                <div class="rating">
+                                    <i class="fas fa-star rat">
+                                    </i>
+                                    <i class="fas fa-star rat"></i>
+                                    <i class="fas fa-star rat"></i>
+                                    <i class="fas fa-star rat"></i>
+                                    <i class="fas fa-star rat"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="shopping-card.htm" class="addtocard1">Add to&nbsp;card</a>
+                        <a href="#" class="addtocard2"><i class="far fa-heart"></i></a>
+                        <a href="#" class="addtocard3"><i class="fas fa-retweet"></i></a>
+                    </div>
+
+                    <div class="catalog-flex">
+                        <a href="single-page.htm" class="productUnit">
+                            <div class="unit-img" style="background-image: url(img/catalog-img/7.jpg)"></div>
+                            <div class="unit-text">
+                                <p class="productUnitName">Mango People T-shirt</p>
+                                <div class="procductUnitPrice">$52.00</div>
+                                <div class="rating">
+                                    <i class="fas fa-star rat">
+                                    </i>
+                                    <i class="fas fa-star rat"></i>
+                                    <i class="fas fa-star rat"></i>
+                                    <i class="fas fa-star rat"></i>
+                                    <i class="fas fa-star rat"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="shopping-card.htm" class="addtocard1">Add to&nbsp;card</a>
+                        <a href="#" class="addtocard2"><i class="far fa-heart"></i></a>
+                        <a href="#" class="addtocard3"><i class="fas fa-retweet"></i></a>
+                    </div>
+
+                    <div class="catalog-flex">
+                        <a href="single-page.htm" class="productUnit">
+                            <div class="unit-img" style="background-image: url(img/catalog-img/8.jpg)"></div>
+                            <div class="unit-text">
+                                <p class="productUnitName">Mango People T-shirt</p>
+                                <div class="procductUnitPrice">$52.00</div>
+                                <div class="rating">
+                                    <i class="fas fa-star rat">
+                                    </i>
+                                    <i class="fas fa-star rat"></i>
+                                    <i class="fas fa-star rat"></i>
+                                    <i class="fas fa-star rat"></i>
+                                    <i class="fas fa-star rat"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="shopping-card.htm" class="addtocard1">Add to&nbsp;card</a>
+                        <a href="#" class="addtocard2"><i class="far fa-heart"></i></a>
+                        <a href="#" class="addtocard3"><i class="fas fa-retweet"></i></a>
+                    </div>
+
+                    <div class="catalog-flex">
+                        <a href="single-page.htm" class="productUnit">
+                            <div class="unit-img" style="background-image: url(img/catalog-img/9.jpg)"></div>
+                            <div class="unit-text">
+                                <p class="productUnitName">Mango People T-shirt</p>
+                                <div class="procductUnitPrice">$52.00</div>
+                                <div class="rating">
+                                    <i class="fas fa-star rat">
+                                    </i>
+                                    <i class="fas fa-star rat"></i>
+                                    <i class="fas fa-star rat"></i>
+                                    <i class="fas fa-star rat"></i>
+                                    <i class="fas fa-star rat"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="shopping-card.htm" class="addtocard1">Add to&nbsp;card</a>
+                        <a href="#" class="addtocard2"><i class="far fa-heart"></i></a>
+                        <a href="#" class="addtocard3"><i class="fas fa-retweet"></i></a>
+                    </div>
+
+                </div>
+                <!--PRODUCT CATALOG-->
+                <!--PRODUCT CATALOG BOTTOM-->
+                <div>
+                    <div class="pages">
+                        <a href="#"><i class="fas fa-angle-left"></i></a>
+                        <a href="#"><i class="active">1</i></a>
+                        <a href="#"><i>2</i></a>
+                        <a href="#"><i>3</i></a>
+                        <a href="#"><i>4</i></a>
+                        <a href="#"><i>5</i></a>
+                        <a href="#"><i>6</i></a>
+                        <a href="#"><i>...</i></a>
+                        <a href="#"><i>20</i></a>
+                        <a href="#"><i class="fas fa-angle-right"></i></a>
+                    </div>
+                    <a href="#" class="viewall">View All</a>
+                </div>
+
+            </section>
+            <!--PRODUCT CATALOG-->
+        </div>
+
+        <!--FEATURE-->
+        <div class="feature-box-side">
+            <div class="feature-box-catalog container">
+                <article class="box-catalog-title">
+                    <img src="img/delivery.svg" alt="delivery">
+                    <h4>Free Delivery</h4>
+                    <p>Worldwide delivery on&nbsp;all. Authorit tively morph next-generation innov tion with extensive
+                        models.</p>
+                </article>
+                <article class="box-catalog-title">
+                    <img src="img/discount.svg" alt="discount">
+                    <h4>Sales &amp;&nbsp;discounts</h4>
+                    <p>Worldwide delivery on&nbsp;all. Authorit tively morph next-generation innov tion with extensive
+                        models.</p>
+                </article>
+                <article class="box-catalog-title">
+                    <img src="img/quality.svg" alt="quality">
+                    <h4>Quality assurance</h4>
+                    <p>Worldwide delivery on&nbsp;all. Authorit tively morph next-generation innov tion with extensive
+                        models.</p>
+                </article>
             </div>
         </div>
-        <!--YOU MAY LIKE ALSO BLOCK-->
+        <!--FEATURE-->
         <!--SUBSCRIBE PANEL-->
         <div class="subscribe">
             <div class="container">
@@ -573,7 +777,8 @@
             </a>
             <p>Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate
                 multidisciplinary materials before go&nbsp;forward benefits. Intrinsicly syndicate an&nbsp;expanded
-                array of&nbsp;processes
+                array of
+                processes
                 and cross-unit partnerships.</p>
             <p>Efficiently plagiarize 24/365 action items and focused infomediaries.
                 Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.</p>
@@ -628,6 +833,6 @@
     </div>
     <!--FOOTER-->
 </div>
-</body>
 
+</body>
 </html>
