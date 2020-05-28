@@ -31,7 +31,15 @@ function renderTemplate($page, $params = [])
  */
 function renderPage()
 {
-    return renderTemplate(LAYOUTS_DIR . 'main');
+    return renderTemplate(LAYOUTS_DIR . 'main', [
+        'header' => renderTemplate(TEMPLATES_DIR . 'header'),
+        'navigation' => renderTemplate(TEMPLATES_DIR . 'navigation'),
+        'breadcrumbs' => renderTemplate(TEMPLATES_DIR . 'breadcrumbs'),
+        'content' => renderTemplate(TEMPLATES_DIR . 'catalogContent'),
+        'subscribePanel' => renderTemplate(TEMPLATES_DIR . 'subscribePanel'),
+        'footer' => renderTemplate(TEMPLATES_DIR . 'footer'),
+        'footerSocial' => renderTemplate(TEMPLATES_DIR . 'footerSocial')
+    ]);
 }
 
 
