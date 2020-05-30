@@ -25,16 +25,6 @@ function renderTemplate($page, $params = [])
     return ob_get_clean(); // возвращаем содержимое буфера памяти, затем очищаем его
 }
 
-function renderContentDS() {
-    return renderTemplate(CONTENTS_DIR . 'catalog_content', [
-        'leftSide' => renderTemplate(CONTENTS_DIR . 'catalog_leftSide'),
-        'topFilter' => renderTemplate(CONTENTS_DIR . 'catalog_topFilter'),
-        'sort' => renderTemplate(CONTENTS_DIR . 'catalog_sort'),
-        'catalog' => renderTemplate(CONTENTS_DIR . 'catalog_productCatalog'),
-        'featureBox' => renderTemplate(CONTENTS_DIR . 'catalog_featureBox')
-    ]);
-}
-
 //$contentArray = [
 //    'leftSide' => renderTemplate(CONTENTS_DIR . 'catalog_leftSide'),
 //    'topFilter' => renderTemplate(CONTENTS_DIR . 'catalog_topFilter'),
@@ -42,6 +32,8 @@ function renderContentDS() {
 //    'catalog' => renderTemplate(CONTENTS_DIR . 'catalog_productCatalog'),
 //    'featureBox' => renderTemplate(CONTENTS_DIR . 'catalog_featureBox')
 //];
+
+// https://www.php.net/manual/ru/function.array-map.php
 
 function renderContent($contentArray) {
     return renderTemplate(CONTENTS_DIR . 'catalog_content', $contentArray);
