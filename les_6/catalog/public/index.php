@@ -22,7 +22,6 @@ $contentArray = [
     'catalog' => 'catalog_productCatalog',
     'featureBox' => 'catalog_featureBox'
 ];
-// var_dump($contentArrayExt);
 
 
 function constructArray ($item) {
@@ -30,6 +29,5 @@ function constructArray ($item) {
 }
 
 $contentArrayUpd = array_map('constructArray', $contentArray);
-var_dump($contentArrayUpd);
-
-echo renderPage($contentArrayUpd);
+$contentPage = 'catalog_content';
+echo renderPage($contentPage, $contentArrayUpd);

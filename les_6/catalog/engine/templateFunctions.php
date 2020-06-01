@@ -35,21 +35,21 @@ function renderTemplate($page, $params = [])
 
 // https://www.php.net/manual/ru/function.array-map.php
 
-function renderContent($contentArray) {
-    return renderTemplate(CONTENTS_DIR . 'catalog_content', $contentArray);
+function renderContent($contentPage, $contentArray) {
+    return renderTemplate(CONTENTS_DIR . $contentPage, $contentArray);
 }
 
 /**
  * Рендеринг высокоуровневого шаблона
  * @return string - отрисованная HTML-страница
  */
-function renderPage($contentArray)
+function renderPage($contentPage, $contentArray)
 {
     return renderTemplate(LAYOUTS_DIR . 'main', [
         'header' => renderTemplate(TEMPLATES_DIR . 'header'),
         'navigation' => renderTemplate(TEMPLATES_DIR . 'navigation'),
         'breadcrumbs' => renderTemplate(TEMPLATES_DIR . 'breadcrumbs'),
-        'content' =>  renderContent($contentArray),
+        'content' =>  renderContent($contentPage, $contentArray),
         'subscribePanel' => renderTemplate(TEMPLATES_DIR . 'subscribePanel'),
         'footer' => renderTemplate(TEMPLATES_DIR . 'footer'),
         'footerSocial' => renderTemplate(TEMPLATES_DIR . 'footerSocial')
