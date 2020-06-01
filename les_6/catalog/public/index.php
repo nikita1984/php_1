@@ -7,7 +7,7 @@ require __DIR__ . '\..\config\main.php';
 // Подключаем файлы с функциями
 requireFunctions(scandir(ENGINE_DIR));
 
-$contentArray = [
+$contentArrayExt = [
     'leftSide' => renderTemplate(CONTENTS_DIR . 'catalog_leftSide'),
     'topFilter' => renderTemplate(CONTENTS_DIR . 'catalog_topFilter'),
     'sort' => renderTemplate(CONTENTS_DIR . 'catalog_sort'),
@@ -15,4 +15,21 @@ $contentArray = [
     'featureBox' => renderTemplate(CONTENTS_DIR . 'catalog_featureBox')
 ];
 
-echo renderPage($contentArray);
+$contentArray = [
+    'leftSide' => 'catalog_leftSide',
+    'topFilter' => 'catalog_topFilter',
+    'sort' => 'catalog_sort',
+    'catalog' => 'catalog_productCatalog',
+    'featureBox' => 'catalog_featureBox'
+];
+// var_dump($contentArrayExt);
+
+
+function constructArray ($item) {
+    return renderTemplate(CONTENTS_DIR . "$item");
+}
+
+$contentArrayUpd = array_map('constructArray', $contentArray);
+var_dump($contentArrayUpd);
+
+echo renderPage($contentArrayUpd);
