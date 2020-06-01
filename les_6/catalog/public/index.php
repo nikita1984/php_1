@@ -7,16 +7,13 @@ require __DIR__ . '\..\config\main.php';
 // Подключаем файлы с функциями
 requireFunctions(scandir(ENGINE_DIR));
 
-$contentArrayExt = [
-    'leftSide' => renderTemplate(CONTENTS_DIR . 'catalog_leftSide'),
-    'topFilter' => renderTemplate(CONTENTS_DIR . 'catalog_topFilter'),
-    'sort' => renderTemplate(CONTENTS_DIR . 'catalog_sort'),
-    'catalog' => renderTemplate(CONTENTS_DIR . 'catalog_productCatalog'),
-    'featureBox' => renderTemplate(CONTENTS_DIR . 'catalog_featureBox')
-];
-
 $contentArray = [
-    'leftSide' => 'catalog_leftSide',
+    'leftSide' => [
+        'catalog_leftSidePlus' => '',
+        'leftSideOne' => 'catalog_leftSidePlus_One',
+        'leftSideTwo' => 'catalog_leftSidePlus_Two',
+        'leftSideThree' => 'catalog_leftSidePlus_Three',
+    ],
     'topFilter' => 'catalog_topFilter',
     'sort' => 'catalog_sort',
     'catalog' => 'catalog_productCatalog',
@@ -25,9 +22,18 @@ $contentArray = [
 
 
 function constructArray ($item) {
-    return renderTemplate(CONTENTS_DIR . "$item");
+    if(is_array($item)) {
+        // По названию ключа первого элемента массива определяем шаблон с логикой построения
+        $page = array_keys($item)[0];
+        // Удаляем первый элемент массива и конструируем составные части верхнеуровневого шаблона
+        array_shift($item);
+        $params = array_map('constructArray', $item);
+        return renderContent($page, $params);
+    } else {
+        return renderTemplate(CONTENTS_DIR . "$item");
+    }
 }
 
-$contentArrayUpd = array_map('constructArray', $contentArray);
+$contentParams = array_map('constructArray', $contentArray);
 $contentPage = 'catalog_content';
-echo renderPage($contentPage, $contentArrayUpd);
+echo renderPage($contentPage, $contentParams);
