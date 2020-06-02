@@ -42,9 +42,10 @@ function renderContent($contentTemplate, $contentParams = []) {
  * Рендеринг высокоуровневого шаблона
  * @return string - отрисованная HTML-страница
  */
-function renderPage($contentTemplate, $contentParams)
+function renderPage($title, $contentTemplate, $contentParams)
 {
     return renderTemplate(LAYOUTS_DIR . 'main', [
+        'title' => $title,
         'header' => renderTemplate(TEMPLATES_DIR . 'header'),
         'navigation' => renderTemplate(TEMPLATES_DIR . 'navigation'),
         'breadcrumbs' => renderTemplate(TEMPLATES_DIR . 'breadcrumbs'),

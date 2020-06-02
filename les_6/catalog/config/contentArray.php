@@ -17,6 +17,7 @@ $subContentArray = [
 ];
 
 $catalog = [
+    'title' => 'catalog',
     'template' => 'catalog_content',
     'params' => [
         'leftSide' => 'catalog_leftSide',
@@ -28,6 +29,7 @@ $catalog = [
 ];
 
 $singlePage = [
+    'title' => 'singlePage',
     'template' => 'singlePage_main',
     'params' => [
         'imgPanel' => 'singlePage_imgPanel',
