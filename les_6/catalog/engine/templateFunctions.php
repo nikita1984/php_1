@@ -35,7 +35,7 @@ function renderTemplate($page, $params = [])
 
 // https://www.php.net/manual/ru/function.array-map.php
 
-function renderContent($contentPage, $contentArray) {
+function renderContent($contentPage, $contentArray = []) {
     return renderTemplate(CONTENTS_DIR . $contentPage, $contentArray);
 }
 
