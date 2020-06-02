@@ -1,0 +1,4 @@
+<details>
+    <?=$leftSideOnePlusFirst?>
+    <?=$leftSideOnePlusSecond?>
+</details>

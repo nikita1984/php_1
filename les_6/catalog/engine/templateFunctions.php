@@ -25,31 +25,30 @@ function renderTemplate($page, $params = [])
     return ob_get_clean(); // возвращаем содержимое буфера памяти, затем очищаем его
 }
 
-//$contentArray = [
-//    'leftSide' => renderTemplate(CONTENTS_DIR . 'catalog_leftSide'),
-//    'topFilter' => renderTemplate(CONTENTS_DIR . 'catalog_topFilter'),
-//    'sort' => renderTemplate(CONTENTS_DIR . 'catalog_sort'),
-//    'catalog' => renderTemplate(CONTENTS_DIR . 'catalog_productCatalog'),
-//    'featureBox' => renderTemplate(CONTENTS_DIR . 'catalog_featureBox')
-//];
+function getTemplateParams ($item) {
+    if (is_array($item)) {
+        $params = array_map('getTemplateParams', $item['params']);
+        return renderContent($item['template'], $params);
+    } else {
+        return renderContent($item);
+    }
+}
 
-// https://www.php.net/manual/ru/function.array-map.php
-
-function renderContent($contentPage, $contentArray = []) {
-    return renderTemplate(CONTENTS_DIR . $contentPage, $contentArray);
+function renderContent($contentTemplate, $contentParams = []) {
+    return renderTemplate(CONTENTS_DIR . $contentTemplate, $contentParams);
 }
 
 /**
  * Рендеринг высокоуровневого шаблона
  * @return string - отрисованная HTML-страница
  */
-function renderPage($contentPage, $contentArray)
+function renderPage($contentTemplate, $contentParams)
 {
     return renderTemplate(LAYOUTS_DIR . 'main', [
         'header' => renderTemplate(TEMPLATES_DIR . 'header'),
         'navigation' => renderTemplate(TEMPLATES_DIR . 'navigation'),
         'breadcrumbs' => renderTemplate(TEMPLATES_DIR . 'breadcrumbs'),
-        'content' =>  renderContent($contentPage, $contentArray),
+        'content' =>  renderContent($contentTemplate, $contentParams),
         'subscribePanel' => renderTemplate(TEMPLATES_DIR . 'subscribePanel'),
         'footer' => renderTemplate(TEMPLATES_DIR . 'footer'),
         'footerSocial' => renderTemplate(TEMPLATES_DIR . 'footerSocial')
