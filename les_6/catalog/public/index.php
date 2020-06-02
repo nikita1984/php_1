@@ -11,6 +11,7 @@ require CONFIG_DIR . 'contentArray.php';
 requireFunctions(scandir(ENGINE_DIR));
 
 $contentArray = $catalog;
+# $contentArray = $singlePage;
 
 $title = $contentArray['title'];
 $contentTemplate = $contentArray['template'];

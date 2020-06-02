@@ -25,6 +25,10 @@ function renderTemplate($page, $params = [])
     return ob_get_clean(); // возвращаем содержимое буфера памяти, затем очищаем его
 }
 
+function renderContent(string $contentTemplate, array $contentParams = []) {
+    return renderTemplate(CONTENTS_DIR . $contentTemplate, $contentParams);
+}
+
 function getTemplateParams ($item) {
     if (is_array($item)) {
         $params = array_map('getTemplateParams', $item['params']);
@@ -34,15 +38,11 @@ function getTemplateParams ($item) {
     }
 }
 
-function renderContent($contentTemplate, $contentParams = []) {
-    return renderTemplate(CONTENTS_DIR . $contentTemplate, $contentParams);
-}
-
 /**
  * Рендеринг высокоуровневого шаблона
  * @return string - отрисованная HTML-страница
  */
-function renderPage($title, $contentTemplate, $contentParams)
+function renderPage(string $title, string $contentTemplate, array $contentParams = [])
 {
     return renderTemplate(LAYOUTS_DIR . 'main', [
         'title' => $title,
