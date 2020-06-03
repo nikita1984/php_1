@@ -6,6 +6,13 @@ $description = 'Compellingly actualize fully researched processes before proacti
             visualize parallel core competencies rather than exceptional portals.';
 $material = 'COTTON';
 $designer = 'BINBURHAN';
+$rating = 4;
+$template = '<i class="fas fa-star rat"></i>';
+
+
+
+$productRating = multiRender ($rating, $template);
+
 //ToDo Реализовать отображение переменных через запрос к БД
 ?>
 <!--SINGLE PAGE DESCRIPTION-->
@@ -16,11 +23,7 @@ $designer = 'BINBURHAN';
         </div>
         <div class="product-description-name"><?=$name?></div>
         <div class="product-description-rating">
-            <i class="fas fa-star rat"></i>
-            <i class="fas fa-star rat"></i>
-            <i class="fas fa-star rat"></i>
-            <i class="fas fa-star rat"></i>
-            <i class="fas fa-star rat"></i>
+            <?=$productRating?>
         </div>
         <div class="product-description-desc"><?=$description?></div>
         <div class="product-description-info">

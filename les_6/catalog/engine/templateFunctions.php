@@ -38,6 +38,19 @@ function getTemplateParams ($item) {
     }
 }
 
+/** Многократно рендерит один и тот-же шаблон
+ * @param $count - число раз, которое будет срендерен шаблон
+ * @param $template - шаблон для многократного рендеринга
+ * @return string Срендеренный шаблон для вставки в HTML-код
+ */
+function multiRender (int $count, string $template) {
+    $output = '';
+    for ($i = 1; $i <= $count; $i++ ) {
+        $output .= $template;
+    }
+    return $output;
+}
+
 /**
  * Рендеринг высокоуровневого шаблона
  * @return string - отрисованная HTML-страница
