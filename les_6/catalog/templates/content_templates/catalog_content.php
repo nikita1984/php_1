@@ -4,6 +4,10 @@
     <section class="right-side">
         <?=$topFilter?>
         <?=$sort?>
+        <!--PRODUCT CATALOG-->
         <?=$catalog?>
+        <!--PRODUCT CATALOG-->
+        <?=$catalogBottom?>
+    </section>
 </div>
 <?=$featureBox?>

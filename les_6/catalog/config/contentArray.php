@@ -24,6 +24,7 @@ $catalog = [
         'topFilter' => 'catalog_topFilter',
         'sort' => 'catalog_sort',
         'catalog' => 'catalog_productCatalog',
+        'catalogBottom' => 'catalog_catalogBottom',
         'featureBox' => 'catalog_featureBox'
     ]
 ];
