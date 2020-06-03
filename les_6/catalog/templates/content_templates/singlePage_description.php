@@ -1,10 +1,20 @@
+<?php
+$name = 'Moschino Cheap And Chic';
+$description = 'Compellingly actualize fully researched processes before proactive
+            outsourcing. Progressively syndicate collaborative architectures before cutting-edge services.
+            Completely
+            visualize parallel core competencies rather than exceptional portals.';
+$material = 'COTTON';
+$designer = 'BINBURHAN';
+//ToDo Реализовать отображение переменных через запрос к БД
+?>
 <!--SINGLE PAGE DESCRIPTION-->
 <div class="product-description container">
     <div class="product-desc__wrapper">
         <div class="desc-head">WOMEN COLLECTION
             <div class="border-bottom"></div>
         </div>
-        <div class="product-description-name">Moschino Cheap And Chic</div>
+        <div class="product-description-name"><?=$name?></div>
         <div class="product-description-rating">
             <i class="fas fa-star rat"></i>
             <i class="fas fa-star rat"></i>
@@ -12,14 +22,10 @@
             <i class="fas fa-star rat"></i>
             <i class="fas fa-star rat"></i>
         </div>
-        <div class="product-description-desc">Compellingly actualize fully researched processes before proactive
-            outsourcing. Progressively syndicate collaborative architectures before cutting-edge services.
-            Completely
-            visualize parallel core competencies rather than exceptional portals.
-        </div>
+        <div class="product-description-desc"><?=$description?></div>
         <div class="product-description-info">
-            <div><span class="desc-info-name">MATERIAL:</span> COTTON</div>
-            <div><span class="desc-info-name">DESIGNER:</span> BINBURHAN</div>
+            <div><span class="desc-info-name">MATERIAL:</span> <?=$material?></div>
+            <div><span class="desc-info-name">DESIGNER:</span> <?=$designer?></div>
         </div>
         <div class="desc-info-price">$561</div>
         <div class="choose-form">
