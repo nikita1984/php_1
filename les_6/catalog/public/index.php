@@ -10,8 +10,10 @@ require CONFIG_DIR . 'contentArray.php';
 // Подключаем файлы с функциями
 requireFunctions(scandir(ENGINE_DIR));
 
-# $contentArray = $catalog;
- $contentArray = $singlePage;
+// todo Установить изменение параметра через метод GET
+
+#  $contentArray = $catalog;
+  $contentArray = $singlePage;
 
 $title = $contentArray['title'];
 $contentTemplate = $contentArray['template'];

@@ -1,3 +1,6 @@
+<?php
+//ToDo Реализовать каталог через цикл
+?>
 <div class="product-catalog">
     <div class="catalog-flex">
         <a href="single-page.htm" class="productUnit">
