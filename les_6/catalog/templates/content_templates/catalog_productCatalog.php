@@ -4,20 +4,79 @@ $price = 52.00;
 $name = 'Mango People T-shirt';
 $rating = 5;
 $fileName = '1.jpg';
-$img = getFilePath ($fileName, 'small');
+$img = getFilePath($fileName, 'small');
 $rating = 4;
 $template = '<i class="fas fa-star rat"></i>';
-$productRating = multiRender ($rating, $template);
+$productRating = multiRender($rating, $template);
+$catalogArray = [
+    [
+        'name' => 'Mango People T-shirt',
+        'price' => 52.00,
+        'filename' => '1.jpg',
+        'rating' => 4
+    ],
+    [
+        'name' => 'Mango People T-shirt',
+        'price' => 52.00,
+        'filename' => '2.jpg',
+        'rating' => 5
+    ],
+    [
+        'name' => 'Mango People T-shirt',
+        'price' => 52.00,
+        'filename' => '3.jpg',
+        'rating' => 5
+    ],
+    [
+        'name' => 'Mango People T-shirt',
+        'price' => 52.00,
+        'filename' => '4.jpg',
+        'rating' => 5
+    ],
+    [
+        'name' => 'Mango People T-shirt',
+        'price' => 52.00,
+        'filename' => '5.jpg',
+        'rating' => 5
+    ],
+    [
+        'name' => 'Mango People T-shirt',
+        'price' => 52.00,
+        'filename' => '6.jpg',
+        'rating' => 5
+    ],
+    [
+        'name' => 'Mango People T-shirt',
+        'price' => 52.00,
+        'filename' => '7.jpg',
+        'rating' => 5
+    ],
+    [
+        'name' => 'Mango People T-shirt',
+        'price' => 52.00,
+        'filename' => '8.jpg',
+        'rating' => 5
+    ],
+    [
+        'name' => 'Mango People T-shirt',
+        'price' => 52.00,
+        'filename' => '9.jpg',
+        'rating' => 5
+    ],
+
+];
+
 ?>
 <div class="product-catalog">
+
     <div class="catalog-flex">
         <a href="single-page.htm" class="productUnit">
-            <div class="unit-img" style="background-image: url(<?=$img?>)"></div>
+            <div class="unit-img" style="background-image: url(<?= $img ?>)"></div>
             <div class="unit-text">
                 <p class="productUnitName">Mango People T-shirt</p>
-                <div class="procductUnitPrice">$<?=$price?></div>
+                <div class="procductUnitPrice">$<?= $price ?></div>
                 <div class="rating">
-                    <?=$productRating?>
+                    <?= $productRating ?>
                 </div>
             </div>
         </a>
