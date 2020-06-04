@@ -8,7 +8,7 @@ function getFilePath (string $fileName, string $sizeType) : string {
     $filePath = '';
     switch ($sizeType){
         case 'small':
-            $filePath .= './images/small/';
+            $filePath .= './img/catalog-img/';
             break;
         case 'big':
             $filePath .= './img/singlePage-img/';

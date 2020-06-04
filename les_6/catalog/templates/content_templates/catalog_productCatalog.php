@@ -1,19 +1,23 @@
 <?php
-//ToDo Реализовать каталог через цикл
+//ToDo Определить переменные шаблона -> Реализовать каталог через цикл
+$price = 52.00;
+$name = 'Mango People T-shirt';
+$rating = 5;
+$fileName = '1.jpg';
+$img = getFilePath ($fileName, 'small');
+$rating = 4;
+$template = '<i class="fas fa-star rat"></i>';
+$productRating = multiRender ($rating, $template);
 ?>
 <div class="product-catalog">
     <div class="catalog-flex">
         <a href="single-page.htm" class="productUnit">
-            <div class="unit-img" style="background-image: url(img/catalog-img/1.jpg)"></div>
+            <div class="unit-img" style="background-image: url(<?=$img?>)"></div>
             <div class="unit-text">
                 <p class="productUnitName">Mango People T-shirt</p>
-                <div class="procductUnitPrice">$52.00</div>
+                <div class="procductUnitPrice">$<?=$price?></div>
                 <div class="rating">
-                    <i class="fas fa-star rat"></i>
-                    <i class="fas fa-star rat"></i>
-                    <i class="fas fa-star rat"></i>
-                    <i class="fas fa-star rat"></i>
-                    <i class="fas fa-star rat"></i>
+                    <?=$productRating?>
                 </div>
             </div>
         </a>

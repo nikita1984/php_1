@@ -12,8 +12,8 @@ requireFunctions(scandir(ENGINE_DIR));
 
 // todo Установить изменение параметра через метод GET
 
-#  $contentArray = $catalog;
-  $contentArray = $singlePage;
+  $contentArray = $catalog;
+#  $contentArray = $singlePage;
 
 $title = $contentArray['title'];
 $contentTemplate = $contentArray['template'];
