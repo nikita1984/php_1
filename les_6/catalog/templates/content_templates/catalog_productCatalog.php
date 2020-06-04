@@ -66,7 +66,7 @@ $catalogData = [
         $productRating = multiRender($item['rating'], $template);
         ?>
         <div class="catalog-flex">
-            <a href="single-page.htm" class="productUnit">
+            <a href="./index.php?page=singlePage" class="productUnit">
                 <div class="unit-img" style="background-image: url(<?= $img ?>)"></div>
                 <div class="unit-text">
                     <p class="productUnitName"><?=$item['name']?></p>
