@@ -1,7 +1,7 @@
 <?php
-$id = $_GET['id'];
-$fileName = "{$id}" . '.jpg';
-$img = getFilePath ($fileName, 'big');
+// $id = $_GET['id'];
+// $fileName = "{$id}" . '.jpg';
+$img = getFilePath ($_GET['id'], 'big');
 //ToDo Реализовать отображение фото через запрос к БД
 ?>
 <!--SINGLE PAGE PANEL-->

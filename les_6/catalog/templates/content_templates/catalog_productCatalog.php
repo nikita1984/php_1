@@ -61,8 +61,7 @@ $catalogData = [
 <div class="product-catalog">
     <? foreach ($catalogData as $item): ?>
     <?php
-        $fileName = "{$item['id']}" . '.jpg';
-        $img = getFilePath($fileName, 'small');
+        $img = getFilePath($item['id'], 'small');
         $template = '<i class="fas fa-star rat"></i>';
         $productRating = multiRender($item['rating'], $template);
         ?>

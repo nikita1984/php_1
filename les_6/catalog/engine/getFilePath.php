@@ -1,10 +1,10 @@
 <?php
 /** Конструирует путь до файла в директории с оригинальными изображениями /images/
- * @param $fileName - имя файла в папке images/big или  images/small
+ * @param $fileTitle - наименование файла (без указания расширения)
  * @param $sizeType - вариант типа файла (для миниатюр и для оригинальных изображений)
  * @return string - возвращает путь до файла в директории с оригинальными изображениями /images/
  */
-function getFilePath (string $fileName, string $sizeType) : string {
+function getFilePath (int $fileTitle, string $sizeType) : string {
     $filePath = '';
     switch ($sizeType){
         case 'small':
@@ -14,7 +14,8 @@ function getFilePath (string $fileName, string $sizeType) : string {
             $filePath .= './img/singlePage-img/';
             break;
     }
-    $filePath .= $fileName;
+    $filePath .= $fileTitle;
+    $filePath .= '.jpg';
     return $filePath;
 }
 
