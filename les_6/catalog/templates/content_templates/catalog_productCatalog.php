@@ -4,55 +4,55 @@ $catalogData = [
     [
         'name' => 'Mango People T-shirt',
         'price' => 50.00,
-        'filename' => '1.jpg',
-        'rating' => 1
+        'id' => 1,
+        'rating' => 1,
     ],
     [
         'name' => 'Mango People T-shirt',
         'price' => 152.00,
-        'filename' => '2.jpg',
+        'id' => 2,
         'rating' => 2
     ],
     [
         'name' => 'Mango People T-shirt',
         'price' => 252.00,
-        'filename' => '3.jpg',
+        'id' => 3,
         'rating' => 3
     ],
     [
         'name' => 'Mango People T-shirt',
         'price' => 72.00,
-        'filename' => '4.jpg',
+        'id' => 4,
         'rating' => 4
     ],
     [
         'name' => 'Mango People T-shirt',
         'price' => 112.00,
-        'filename' => '5.jpg',
+        'id' => 5,
         'rating' => 5
     ],
     [
         'name' => 'Mango People T-shirt',
         'price' => 78.00,
-        'filename' => '6.jpg',
+        'id' => 6,
         'rating' => 1
     ],
     [
         'name' => 'Mango People T-shirt',
         'price' => 40.00,
-        'filename' => '7.jpg',
+        'id' => 7,
         'rating' => 2
     ],
     [
         'name' => 'Mango People T-shirt',
         'price' => 35.00,
-        'filename' => '8.jpg',
+        'id' => 8,
         'rating' => 3
     ],
     [
         'name' => 'Mango People T-shirt',
         'price' => 126.00,
-        'filename' => '9.jpg',
+        'id' => 9,
         'rating' => 4
     ],
 ];
@@ -61,12 +61,13 @@ $catalogData = [
 <div class="product-catalog">
     <? foreach ($catalogData as $item): ?>
     <?php
-        $img = getFilePath($item['filename'], 'small');
+        $fileName = "{$item['id']}" . '.jpg';
+        $img = getFilePath($fileName, 'small');
         $template = '<i class="fas fa-star rat"></i>';
         $productRating = multiRender($item['rating'], $template);
         ?>
         <div class="catalog-flex">
-            <a href="./index.php?page=singlePage" class="productUnit">
+            <a href="./index.php?page=singlePage&id=<?=$item['id']?>" class="productUnit">
                 <div class="unit-img" style="background-image: url(<?= $img ?>)"></div>
                 <div class="unit-text">
                     <p class="productUnitName"><?=$item['name']?></p>
