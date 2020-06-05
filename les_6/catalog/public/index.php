@@ -16,7 +16,5 @@ if($_GET['page'] == 'singlePage') {
     $contentArray = $catalog;
 }
 
-$title = $contentArray['title'];
-$contentTemplate = $contentArray['template'];
 $contentParams = array_map('getTemplateParams', $contentArray['params']);
-echo renderPage($title, $contentTemplate, $contentParams);
+echo renderPage( $contentArray['title'], $contentArray['template'], $contentParams);

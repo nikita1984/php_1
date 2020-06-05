@@ -1,5 +1,6 @@
 <?php
-$fileName = '1.jpg';
+$id = 1;
+$fileName = "{$id}" . '.jpg';
 $img = getFilePath ($fileName, 'big');
 //ToDo Реализовать отображение фото через запрос к БД
 ?>
