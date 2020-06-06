@@ -6,8 +6,6 @@ $material = $_GET['material'];
 $designer = $_GET['designer'];
 $rating = $_GET['rating'];
 
-//ToDo Возможно вывести $template в конфигурацию
-// $template = RENDER_TEMPLATES;
 $productRating = multiRender($rating, RENDER_TEMPLATES);
 ?>
 <!--SINGLE PAGE DESCRIPTION-->
