@@ -1,7 +1,7 @@
 <?php
 function getConnection()
 {
-    $dbConfig = include_once CONFIG_DIR . 'db.php';
+    $dbConfig = include CONFIG_DIR . 'db.php';
     static $conn = null;
     if (is_null($conn)) {
         $conn = mysqli_connect(
