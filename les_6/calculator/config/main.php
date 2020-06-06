@@ -1,4 +1,6 @@
 <?php
+// Устанавливаем "строгий" режим
+declare(strict_types=1);
 define("DOCUMENT_ROOT", __DIR__ . "/../");
 define("CONFIG_DIR", DOCUMENT_ROOT . "config/");
 define("ENGINE_DIR", DOCUMENT_ROOT . "engine/");
