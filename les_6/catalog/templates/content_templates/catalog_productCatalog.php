@@ -6,7 +6,7 @@ closeConnection();
 <div class="product-catalog">
     <? foreach ($catalogData as $item): ?>
         <?php
-        $img = getFilePath($item['id'], 'small');
+        $img = getFilePath($item['id'], 'catalog-img');
         $productRating = multiRender($item['rating'], RENDER_TEMPLATES);
         ?>
         <div class="catalog-flex">

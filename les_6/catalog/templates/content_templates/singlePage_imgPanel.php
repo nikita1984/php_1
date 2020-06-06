@@ -1,5 +1,5 @@
 <?php
-$img = getFilePath($_GET['id'], 'big');
+$img = getFilePath($_GET['id'], 'singlePage-img');
 ?>
 <!--SINGLE PAGE PANEL-->
 <div class="single-page" style="background-image: url(<?= $img ?>)">
