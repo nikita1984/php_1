@@ -1,11 +1,8 @@
 <?php
-// $id = $_GET['id'];
-// $fileName = "{$id}" . '.jpg';
-$img = getFilePath ($_GET['id'], 'big');
-//ToDo Реализовать отображение фото через запрос к БД
+$img = getFilePath($_GET['id'], 'big');
 ?>
 <!--SINGLE PAGE PANEL-->
-<div class="single-page" style="background-image: url(<?=$img ?>)">
+<div class="single-page" style="background-image: url(<?= $img ?>)">
     <a href="#" class="arrow">
         <div class="angle"><i class="fas fa-angle-left"></i></div>
     </a>
