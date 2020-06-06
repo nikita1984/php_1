@@ -1,17 +1,14 @@
 <?php
-$name = 'Moschino Cheap And Chic';
-$description = 'Compellingly actualize fully researched processes before proactive
-            outsourcing. Progressively syndicate collaborative architectures before cutting-edge services.
-            Completely
-            visualize parallel core competencies rather than exceptional portals.';
-$material = 'COTTON';
-$designer = 'BINBURHAN';
-$rating = 4;
+$name = $_GET['name'];
+$price = $_GET['price'];
+$description = $_GET['description'];
+$material = $_GET['material'];
+$designer = $_GET['designer'];
+$rating = $_GET['rating'];
 $template = '<i class="fas fa-star rat"></i>';
 
 
-
-$productRating = multiRender ($rating, $template);
+$productRating = multiRender($rating, $template);
 
 //ToDo Реализовать отображение переменных через запрос к БД
 ?>
@@ -21,16 +18,16 @@ $productRating = multiRender ($rating, $template);
         <div class="desc-head">WOMEN COLLECTION
             <div class="border-bottom"></div>
         </div>
-        <div class="product-description-name"><?=$name?></div>
+        <div class="product-description-name"><?= $name ?></div>
         <div class="product-description-rating">
-            <?=$productRating?>
+            <?= $productRating ?>
         </div>
-        <div class="product-description-desc"><?=$description?></div>
+        <div class="product-description-desc"><?= $description ?></div>
         <div class="product-description-info">
-            <div><span class="desc-info-name">MATERIAL:</span> <?=$material?></div>
-            <div><span class="desc-info-name">DESIGNER:</span> <?=$designer?></div>
+            <div><span class="desc-info-name">MATERIAL:</span> <?= $material ?></div>
+            <div><span class="desc-info-name">DESIGNER:</span> <?= $designer ?></div>
         </div>
-        <div class="desc-info-price">$561</div>
+        <div class="desc-info-price">$<?= $price ?></div>
         <div class="choose-form">
             <div class="form-choose-div"><span class="product-desc-head">CHOOSE COLOR</span><input id="color"
                                                                                                    list="dl_color"
