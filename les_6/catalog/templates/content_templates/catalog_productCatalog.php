@@ -7,9 +7,7 @@ closeConnection();
     <? foreach ($catalogData as $item): ?>
         <?php
         $img = getFilePath($item['id'], 'small');
-        //ToDo Возможно вывести $template в конфигурацию
-        $template = '<i class="fas fa-star rat"></i>';
-        $productRating = multiRender($item['rating'], $template);
+        $productRating = multiRender($item['rating'], RENDER_TEMPLATES);
         ?>
         <div class="catalog-flex">
             <a href="./index.php?page=singlePage&id=<?= $item['id'] ?>

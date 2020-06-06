@@ -7,8 +7,8 @@ $designer = $_GET['designer'];
 $rating = $_GET['rating'];
 
 //ToDo Возможно вывести $template в конфигурацию
-$template = '<i class="fas fa-star rat"></i>';
-$productRating = multiRender($rating, $template);
+// $template = RENDER_TEMPLATES;
+$productRating = multiRender($rating, RENDER_TEMPLATES);
 ?>
 <!--SINGLE PAGE DESCRIPTION-->
 <div class="product-description container">

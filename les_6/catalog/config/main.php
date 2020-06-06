@@ -1,4 +1,6 @@
 <?php
+// Устанавливаем "строгий" режим
+declare(strict_types=1);
 define("DOCUMENT_ROOT", __DIR__ . "/../");
 define("CONFIG_DIR", DOCUMENT_ROOT . "config/");
 define("ENGINE_DIR", DOCUMENT_ROOT . "engine/");
@@ -8,6 +10,7 @@ define("ENGINE_DIR", DOCUMENT_ROOT . "engine/");
 define("TEMPLATES_DIR", DOCUMENT_ROOT .'templates/');
 define("CONTENTS_DIR", TEMPLATES_DIR .'content_templates/');
 define("LAYOUTS_DIR", TEMPLATES_DIR . 'layouts/');
+define("RENDER_TEMPLATES", '<i class="fas fa-star rat"></i>');
 
 function requireFunctions($arr){
     foreach ($arr as $item) {
