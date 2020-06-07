@@ -1,7 +1,7 @@
 <?php
 function getConnection()
 {
-    $dbConfig = include_once CONFIG_DIR . 'db.php';
+    $dbConfig = include CONFIG_DIR . 'db.php';
     static $conn = null;
     if (is_null($conn)) {
         $conn = mysqli_connect(
@@ -11,13 +11,17 @@ function getConnection()
             $dbConfig['dbName']
         );
         if (!$conn) {
-            echo "Ошибка: Невозможно установить соединение с MySQL." . PHP_EOL;
-            echo "Код ошибки errno: " . mysqli_connect_errno() . PHP_EOL;
-            echo "Текст ошибки error: " . mysqli_connect_error() . PHP_EOL;
-            exit;
+            printSQLError ();
         }
     }
     return $conn;
+}
+
+function printSQLError () {
+    echo "Ошибка: Невозможно установить соединение с MySQL." . PHP_EOL;
+    echo "Код ошибки errno: " . mysqli_connect_errno() . PHP_EOL;
+    echo "Текст ошибки error: " . mysqli_connect_error() . PHP_EOL;
+    exit;
 }
 
 function execute(string $sql)
