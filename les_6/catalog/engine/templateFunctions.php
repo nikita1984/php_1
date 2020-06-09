@@ -30,12 +30,12 @@ function renderContent(string $contentTemplate, array $contentParams = []) {
 }
 
 function getTemplateParams ($item) {
-    if (is_array($item)) {
-        $params = array_map('getTemplateParams', $item['params']);
-        return renderContent($item['template'], $params);
-    } else {
+ //   if (is_array($item)) {
+//        $params = array_map('getTemplateParams', $item['params']);
+//        return renderContent($item['template'], $params);
+//    } else {
         return renderContent($item);
-    }
+//    }
 }
 
 /** Многократно рендерит один и тот-же шаблон
@@ -62,7 +62,7 @@ function renderPage(string $title, string $contentTemplate, array $contentParams
         'header' => renderTemplate(TEMPLATES_DIR . 'header'),
         'navigation' => renderTemplate(TEMPLATES_DIR . 'navigation'),
         'breadcrumbs' => renderTemplate(TEMPLATES_DIR . 'breadcrumbs'),
-        'content' =>  renderContent($contentTemplate, $contentParams),
+        'content' =>  renderTemplate(CONTENTS_DIR . $contentTemplate, $contentParams),
         'subscribePanel' => renderTemplate(TEMPLATES_DIR . 'subscribePanel'),
         'footer' => renderTemplate(TEMPLATES_DIR . 'footer'),
         'footerSocial' => renderTemplate(TEMPLATES_DIR . 'footerSocial')
