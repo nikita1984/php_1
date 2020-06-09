@@ -20,7 +20,7 @@ if($_GET['page'] == 'singlePage') {
         'title' => 'catalog',
         'template' => 'catalog_content',
         'params' => [
-            'leftSide' => renderTemplate(CONTENTS_DIR . 'catalog_leftSide'), // renderTemplate(CONTENTS_DIR . $contentTemplate
+            'leftSide' => renderTemplate(CONTENTS_DIR . 'catalog_leftSide'),
             'topFilter' => renderTemplate(CONTENTS_DIR .'catalog_topFilter'),
             'sort' => renderTemplate(CONTENTS_DIR . 'catalog_sort'),
             'catalog' => renderTemplate(CONTENTS_DIR . 'catalog_productCatalog'),
