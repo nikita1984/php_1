@@ -7,7 +7,6 @@ closeConnection();
     <? foreach ($catalogData as $item): ?>
         <?php
         $img = getFilePath($item['id'], 'catalog-img');
-        $productRating = multiRender($item['rating'], RENDER_TEMPLATES);
         ?>
         <div class="catalog-flex">
             <a href="./index.php?page=singlePage&id=<?= $item['id'] ?>
@@ -22,7 +21,9 @@ closeConnection();
                     <p class="productUnitName"><?= $item['name'] ?></p>
                     <div class="procductUnitPrice">$<?= $item['price'] ?></div>
                     <div class="rating">
-                        <?= $productRating ?>
+                        <?php for ($i = 1; $i <= $item['rating']; $i++ ): ?>
+                            <i class="fas fa-star rat"></i>
+                        <? endfor; ?>
                     </div>
                 </div>
             </a>

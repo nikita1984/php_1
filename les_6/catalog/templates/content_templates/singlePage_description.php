@@ -5,8 +5,6 @@ $description = $_GET['description'];
 $material = $_GET['material'];
 $designer = $_GET['designer'];
 $rating = $_GET['rating'];
-
-$productRating = multiRender($rating, RENDER_TEMPLATES);
 ?>
 <!--SINGLE PAGE DESCRIPTION-->
 <div class="product-description container">
@@ -16,7 +14,9 @@ $productRating = multiRender($rating, RENDER_TEMPLATES);
         </div>
         <div class="product-description-name"><?= $name ?></div>
         <div class="product-description-rating">
-            <?= $productRating ?>
+            <?php for ($i = 1; $i <= $rating; $i++ ): ?>
+                <i class="fas fa-star rat"></i>
+            <? endfor; ?>
         </div>
         <div class="product-description-desc"><?= $description ?></div>
         <div class="product-description-info">

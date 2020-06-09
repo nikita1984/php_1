@@ -5,9 +5,6 @@ require __DIR__ . '\..\config\main.php';
 // Подключаем файлы с функциями
 requireFunctions(scandir(ENGINE_DIR));
 
-// Подключаем файл с настройками шаблонов
-require CONFIG_DIR . 'contentArray.php';
-
 if($_GET['page'] == 'singlePage') {
     $contentArray = [
         'title' => 'singlePage',
@@ -19,8 +16,27 @@ if($_GET['page'] == 'singlePage') {
         ]
     ];
 } else {
-    $contentArray = $catalog;
+    $contentArray = [
+        'title' => 'catalog',
+        'template' => 'catalog_content',
+        'params' => [
+            'leftSide' => renderTemplate(CONTENTS_DIR . 'catalog_leftSide'), // renderTemplate(CONTENTS_DIR . $contentTemplate
+            'topFilter' => renderTemplate(CONTENTS_DIR .'catalog_topFilter'),
+            'sort' => renderTemplate(CONTENTS_DIR . 'catalog_sort'),
+            'catalog' => renderTemplate(CONTENTS_DIR . 'catalog_productCatalog'),
+            'catalogBottom' => renderTemplate(CONTENTS_DIR . 'catalog_catalogBottom'),
+            'featureBox' => renderTemplate(CONTENTS_DIR . 'catalog_featureBox')
+        ]
+    ];
 }
 
-// $contentParams = array_map('getTemplateParams', $contentArray['params']);
-echo renderPage( $contentArray['title'], $contentArray['template'], $contentArray['params']);
+echo renderTemplate(LAYOUTS_DIR . 'main', [
+    'title' => $contentArray['title'],
+    'header' => renderTemplate(TEMPLATES_DIR . 'header'),
+    'navigation' => renderTemplate(TEMPLATES_DIR . 'navigation'),
+    'breadcrumbs' => renderTemplate(TEMPLATES_DIR . 'breadcrumbs'),
+    'content' =>  renderTemplate(CONTENTS_DIR . $contentArray['template'], $contentArray['params']),
+    'subscribePanel' => renderTemplate(TEMPLATES_DIR . 'subscribePanel'),
+    'footer' => renderTemplate(TEMPLATES_DIR . 'footer'),
+    'footerSocial' => renderTemplate(TEMPLATES_DIR . 'footerSocial')
+]);

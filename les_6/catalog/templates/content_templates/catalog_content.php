@@ -1,7 +1,3 @@
-<?php
-
-?>
-
 <div class="container">
     <?=$leftSide?>
     <!--RIGHT-SIDE CATALOG-->
