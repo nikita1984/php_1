@@ -8,6 +8,7 @@ define("CONFIG_DIR", DOCUMENT_ROOT . "config/");
 define("ENGINE_DIR", DOCUMENT_ROOT . "engine/");
 define("TEMPLATES_DIR", DOCUMENT_ROOT .'templates/');
 define("CONTENTS_DIR", TEMPLATES_DIR .'content_templates/');
+define("HEADER_DIR", TEMPLATES_DIR .'header_templates/');
 define("LAYOUTS_DIR", TEMPLATES_DIR . 'layouts/');
 
 function requireFunctions($arr){
