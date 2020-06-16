@@ -1,20 +1,22 @@
 <?php
-$cartData = [
-    0 => [
-        'id' => 1,
-        'name' => 'Rebox Zane',
-        'rating' => '4',
-        'price' => 250,
-        'qty' => 2,
-    ],
-    1 => [
-        'id' => 2,
-        'name' => 'Rebox Zane',
-        'rating' => '3',
-        'price' => 300,
-        'qty' => 1,
-    ]
-];
+//$cartData = [
+//    0 => [
+//        'id' => 1,
+//        'name' => 'Rebox Zane',
+//        'rating' => '4',
+//        'price' => 250,
+//        'qty' => 2,
+//    ],
+//    1 => [
+//        'id' => 2,
+//        'name' => 'Rebox Zane',
+//        'rating' => '3',
+//        'price' => 300,
+//        'qty' => 1,
+//    ]
+//];
+
+$cartData = $_SESSION['cartData'];
 
 foreach ($cartData as $item) {
     $total += $item['price'] * $item['qty'];
