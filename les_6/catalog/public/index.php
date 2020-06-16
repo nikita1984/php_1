@@ -20,9 +20,12 @@ if($_GET['page'] == 'singlePage') {
 session_start();
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $index = (int) $_POST['id'] - 1;
-    $cartData[$index] = $_SESSION['catalogData'][$index];
-    $cartData[$index]['qty'] = 1;
-    $_SESSION['cartData'] = $cartData;
+    if (array_key_exists($index, $_SESSION['cartData'])) {
+        $_SESSION['cartData'][$index]['qty'] ++;
+    } else {
+        $_SESSION['cartData'][$index] = $_SESSION['catalogData'][$index];
+        $_SESSION['cartData'][$index]['qty'] = 1;
+    }
 }
 
 echo renderTemplate(LAYOUTS_DIR . 'main', [
