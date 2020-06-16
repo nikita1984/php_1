@@ -10,7 +10,7 @@ closeConnection();
         <?php
         $img = getFilePath($item['id'], 'catalog-img');
         ?>
-        <div class="catalog-flex">
+        <form class="catalog-flex" action="">
                 <a href="./index.php?page=singlePage&id=<?= $item['id'] ?>
                                                 &rating=<?= $item['rating'] ?>
                                                 &name=<?= $item['name'] ?>
@@ -33,7 +33,7 @@ closeConnection();
             <a href="#" class="addtocard2"><i class="far fa-heart"></i></a>
             <a href="#" class="addtocard3"><i class="fas fa-retweet"></i></a>
 
-        </div>
+        </form>
     <? endforeach; ?>
 </div>
 
