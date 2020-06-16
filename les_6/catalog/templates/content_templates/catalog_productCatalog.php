@@ -10,7 +10,7 @@ closeConnection();
         <?php
         $img = getFilePath($item['id'], 'catalog-img');
         ?>
-        <form class="catalog-flex" action="">
+        <form class="catalog-flex" action="" enctype="multipart/form-data" method="post">
                 <a href="./index.php?page=singlePage&id=<?= $item['id'] ?>
                                                 &rating=<?= $item['rating'] ?>
                                                 &name=<?= $item['name'] ?>
@@ -29,10 +29,9 @@ closeConnection();
                     </div>
                 </div>
             </a>
-            <button type="submit" value="<?= $item['id'] ?>"><span class="addtocard1">Add to card</span></button>
+            <button type="submit" name="id" value="<?= $item['id'] ?>"><span class="addtocard1">Add to card</span></button>
             <a href="#" class="addtocard2"><i class="far fa-heart"></i></a>
             <a href="#" class="addtocard3"><i class="fas fa-retweet"></i></a>
-
         </form>
     <? endforeach; ?>
 </div>

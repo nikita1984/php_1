@@ -17,6 +17,13 @@ if($_GET['page'] == 'singlePage') {
     ];
 }
 
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
+   var_dump($_POST);
+   $cartData = $catalogData['$_POST'];
+    // var_dump($catalogData);
+    // var_dump($cartData);
+}
+
 echo renderTemplate(LAYOUTS_DIR . 'main', [
     'title' => $contentArray['title'],
     'header' => renderTemplate(TEMPLATES_DIR . 'header'),
