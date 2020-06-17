@@ -1,24 +1,8 @@
 <?php
+$cartData = [];
 
 if (array_key_exists('cartData', $_SESSION)) {
     $cartData = $_SESSION['cartData'];
-} else {
-    $cartData = [
-        0 => [
-            'id' => 1,
-            'name' => 'Rebox Zane',
-            'rating' => '4',
-            'price' => 250,
-            'qty' => 2,
-        ],
-        1 => [
-            'id' => 2,
-            'name' => 'Rebox Zane',
-            'rating' => '3',
-            'price' => 300,
-            'qty' => 1,
-        ]
-    ];
 }
 
 $numbersData = count($cartData);
