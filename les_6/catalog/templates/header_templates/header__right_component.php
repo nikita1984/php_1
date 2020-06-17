@@ -36,7 +36,14 @@ foreach ($cartData as $item) {
                 $img = getFilePath($cartDataElem['id'], 'shopping-cart-drop_menu-img');
                 ?>
                 <div class="product-in-sc">
-                    <a href="single-page.htm" style="float: left; width: 240px;">
+                    <a href="./index.php?page=singlePage&id=<?= $cartDataElem['id'] ?>
+                                                           &rating=<?= $cartDataElem['rating'] ?>
+                                                           &name=<?= $cartDataElem['name'] ?>
+                                                           &price=<?= $cartDataElem['price'] ?>
+                                                           &description=<?= $cartDataElem['description'] ?>
+                                                           &material=<?= $cartDataElem['material'] ?>
+                                                           &designer=<?= $cartDataElem['designer'] ?>"
+                                                           style="float: left; width: 240px;">
                         <div class="product-in-sc-img" style="background-image: url(<?= $img ?>)">
                         </div>
 
