@@ -21,6 +21,7 @@ if (array_key_exists('cartData', $_SESSION)) {
     ];
 }
 
+$numbersData = count($cartData);
 
 foreach ($cartData as $item) {
     $total += $item['price'] * $item['qty'];
@@ -29,7 +30,7 @@ foreach ($cartData as $item) {
 <div class="header__right">
     <div class="sh"><a href="shopping-card.htm"><img src="img/Forma_1.svg" alt="basket"
                                                      class="shopping-cart"></a>
-        <div class="sh-count">5</div>
+        <div class="sh-count"><?= $numbersData ?></div>
         <div class="shopping-cart__drop">
             <? foreach ($cartData as $cartDataElem): ?>
                 <?php
