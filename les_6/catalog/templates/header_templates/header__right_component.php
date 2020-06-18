@@ -44,8 +44,15 @@ foreach ($cartData as $item) {
 
                         </div>
                     </a>
+                    <button class="border-none" type="submit" name="id" value="<?= $item['id'] ?>">
+                        <a href="#" class="action">
+                            <i class="far fa-times-circle"></i>
+                        </a>
+                    </button>
+                    <!--
                     <div class="sh__action"><a href="#" class="action"><i
                                     class="far fa-times-circle"></i></a></div>
+                            -->
 
                 </div>
             <? endforeach; ?>
