@@ -20,7 +20,7 @@ foreach ($cartData as $item) {
                 <?php
                 $img = getFilePath($cartDataElem['id'], 'shopping-cart-drop_menu-img');
                 ?>
-                <div class="product-in-sc">
+                <form class="product-in-sc" action="" enctype="multipart/form-data" method="post">
                     <a href="./index.php?page=singlePage&id=<?= $cartDataElem['id'] ?>
                                                            &rating=<?= $cartDataElem['rating'] ?>
                                                            &name=<?= $cartDataElem['name'] ?>
@@ -44,7 +44,7 @@ foreach ($cartData as $item) {
 
                         </div>
                     </a>
-                    <button class="border-none" type="submit" name="id" value="<?= $item['id'] ?>">
+                    <button class="border-none" type="submit" name="delete" value="<?= $item['id'] ?>">
                         <a href="#" class="action">
                             <i class="far fa-times-circle"></i>
                         </a>
@@ -54,7 +54,7 @@ foreach ($cartData as $item) {
                                     class="far fa-times-circle"></i></a></div>
                             -->
 
-                </div>
+                </form>
             <? endforeach; ?>
             <div class="total">
                 <div>total</div>

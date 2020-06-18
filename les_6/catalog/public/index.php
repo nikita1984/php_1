@@ -19,6 +19,8 @@ if($_GET['page'] == 'singlePage') {
 
 session_start();
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
+    var_dump($_POST['id']);
+
     $index = (int) $_POST['id'] - 1;
     if (is_null($_SESSION['cartData']) || !array_key_exists($index, $_SESSION['cartData'])) {
         $_SESSION['cartData'][$index] = $_SESSION['catalogData'][$index];
