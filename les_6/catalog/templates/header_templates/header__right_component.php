@@ -44,7 +44,7 @@ foreach ($cartData as $item) {
 
                         </div>
                     </a>
-                    <button class="border-none" type="submit" name="delete" value="<?= $item['id'] ?>">
+                    <button class="border-none" type="submit" name="delete" value="<?= $cartDataElem['id'] ?>">
                         <a href="#" class="action">
                             <i class="far fa-times-circle"></i>
                         </a>
