@@ -32,12 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (array_key_exists('delete', $_POST)) {
         $index = (int)$_POST['delete'] - 1;
         if ($_SESSION['cartData'][$index]['qty'] === 1) {
-
-           var_dump($_SESSION['cartData']);
-            var_dump($index);
-            array_splice($_SESSION['cartData'], $index, 1);
-            echo 'товар удален';
-            var_dump($_SESSION['cartData']);
+            unset($_SESSION['cartData'][$index]);
         } else {
             $_SESSION['cartData'][$index]['qty']--;
         }
