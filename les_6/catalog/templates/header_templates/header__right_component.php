@@ -64,5 +64,5 @@ foreach ($cartData as $item) {
             <a href="shopping-card.htm" class="sc-btn">go&nbsp;to&nbsp;cart</a>
         </div>
     </div>
-    <a class="button" href="#">My&nbsp;Account<i class="fas fa-caret-down"></i></a>
+    <a class="button" href="auth.php">Пожалуйста авторизуйтесь<i class="fas fa-caret-down"></i></a>
 </div>
