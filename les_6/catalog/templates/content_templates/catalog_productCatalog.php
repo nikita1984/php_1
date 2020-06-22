@@ -2,8 +2,6 @@
 $sql = 'SELECT * FROM shopTable';
 $catalogData = SQLQuery($sql, 'All');
 $_SESSION['catalogData'] = $catalogData;
-// var_dump($catalogData);
-// var_dump($catalogData[0]);
 closeConnection();
 ?>
 <div class="product-catalog">
