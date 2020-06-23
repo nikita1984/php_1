@@ -42,6 +42,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['cartData'][$index]['qty']--;
         }
     }
+
+    if (array_key_exists('login', $_POST)) {
+        $login = post('login');
+        $password = post('password');
+        // Полагаю, что соль на  данном примере cо встроенным методом password_hash() является излишней,
+        // однако реализовал её чтобы показать понимание урока
+        $salt = '5@duh7';
+        $passwordUpd = $password . $salt;
+        // осуществляем поиск пользователя в БД по полученному логину
+        $user = getUserByLogin($login);
+        // Если пользователь был найден в БД ($user = true) и введённый им пароль совпадает с
+        // хешированным в БД, то автторизуем пользователя, если нет то кидаем текст отказа в авторизации
+        if ($user && password_verify($passwordUpd, $user['password'])) {
+        // текущей сессии присваиваем идетификатор, равный id пользователя
+        // $_SESSION['user_id'] = $user['id'];
+            echo "Вы авторизованы!!";
+        } else {
+            echo "Логин и (или) пароль неверны";
+        }
+    }
 }
 
 echo renderTemplate(LAYOUTS_DIR . 'main', [
