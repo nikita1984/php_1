@@ -10,6 +10,11 @@ if ($_GET['page'] == 'singlePage') {
         'title' => 'singlePage',
         'template' => 'singlePage_main',
     ];
+} elseif ($_GET['page'] == 'authentication') {
+    $contentArray = [
+        'title' => 'authentication',
+        'template' => 'authentication',
+    ];
 } else {
     $contentArray = [
         'title' => 'catalog',
