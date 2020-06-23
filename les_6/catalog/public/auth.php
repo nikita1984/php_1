@@ -27,7 +27,6 @@ $passwordUpd = $password . $salt;
 $user = getUserByLogin($login);
 // Если пользователь был найден в БД ($user = true) и введённый им пароль совпадает с
 // хешированным в БД, то автторизуем пользователя, если нет то кидаем текст отказа в авторизации
-// if($user && $user['password'] == getHash($password)){
 if($user && password_verify($passwordUpd , $user['password'])){
 // текущей сессии присваиваем идетификатор, равный id пользователя
 // $_SESSION['user_id'] = $user['id'];
