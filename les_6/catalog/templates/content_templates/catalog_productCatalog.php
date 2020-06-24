@@ -3,9 +3,10 @@ $sql = 'SELECT * FROM shopTable';
 $catalogData = SQLQuery($sql, 'All');
 $_SESSION['catalogData'] = $catalogData;
 closeConnection();
+// var_dump($catalogData);
 ?>
 <div class="product-catalog">
-    <? foreach ($catalogData as $item): ?>
+    <? foreach ($catalogData as $key => $item): ?>
         <?php
         $img = getFilePath($item['id'], 'catalog-img');
         ?>
@@ -28,7 +29,7 @@ closeConnection();
                     </div>
                 </div>
             </a>
-            <button type="submit" name="id" value="<?= $item['id'] ?>"><span class="addtocard1">Add to card</span></button>
+            <button type="submit" name="add" value="<?= $key ?>"><span class="addtocard1">Add to card</span></button>
             <a href="#" class="addtocard2"><i class="far fa-heart"></i></a>
             <a href="#" class="addtocard3"><i class="fas fa-retweet"></i></a>
         </form>

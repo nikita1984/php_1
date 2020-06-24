@@ -22,7 +22,7 @@ if (is_null($authButton)) {
                                                      class="shopping-cart"></a>
         <div class="sh-count"><?= $numbersCartPosition ?></div>
         <div class="shopping-cart__drop">
-            <? foreach ($cartData as $cartDataElem): ?>
+            <? foreach ($cartData as $key => $cartDataElem): ?>
                 <?php
                 $img = getFilePath($cartDataElem['id'], 'shopping-cart-drop_menu-img');
                 ?>
@@ -50,7 +50,7 @@ if (is_null($authButton)) {
 
                         </div>
                     </a>
-                    <button class="border-none" type="submit" name="delete" value="<?= $cartDataElem['id'] ?>">
+                    <button class="border-none" type="submit" name="delete" value="<?= $key ?>">
                         <a href="#" class="action">
                             <i class="far fa-times-circle"></i>
                         </a>

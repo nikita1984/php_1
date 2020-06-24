@@ -5,12 +5,12 @@ require __DIR__ . '\..\config\main.php';
 // Подключаем файлы с функциями
 requireFunctions(scandir(ENGINE_DIR));
 
-if (get('page') == 'singlePage') {
+if (get('page') === 'singlePage') {
     $contentArray = [
         'title' => 'singlePage',
         'template' => 'singlePage_main',
     ];
-} elseif (get('page') == 'authentication') {
+} elseif (get('page') === 'authentication') {
     $contentArray = [
         'title' => 'authentication',
         'template' => 'authentication',
@@ -24,8 +24,8 @@ if (get('page') == 'singlePage') {
 
 session_start();
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if (array_key_exists('id', $_POST)) {
-        $index = (int)$_POST['id'] - 1;
+    if (array_key_exists('add', $_POST)) {
+        $index = post('add');
         if (is_null($_SESSION['cartData']) || !array_key_exists($index, $_SESSION['cartData'])) {
             $_SESSION['cartData'][$index] = $_SESSION['catalogData'][$index];
             $_SESSION['cartData'][$index]['qty'] = 1;
@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if (array_key_exists('delete', $_POST)) {
-        $index = (int)$_POST['delete'] - 1;
+        $index = post('delete');
         if ($_SESSION['cartData'][$index]['qty'] === 1) {
             unset($_SESSION['cartData'][$index]);
         } else {
@@ -54,10 +54,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Если пользователь был найден в БД и введённый им пароль совпадает с
         // хешированным в БД, то авторизуем пользователя, если нет то кидаем текст отказа в авторизации
         if ($user && password_verify($passwordUpd, $user['password'])) {
-        // текущей сессии присваиваем идетификатор и имя, равные данным пользователя
-        $_SESSION['user_id'] = $user['id'];
-        $_SESSION['user_name'] = $user['name'];
-        redirect("index.php");
+            // текущей сессии присваиваем идетификатор и имя, равные данным пользователя
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['user_name'] = $user['name'];
+            redirect("index.php");
         } else {
             echo "Ошибка авторизации";
         }
