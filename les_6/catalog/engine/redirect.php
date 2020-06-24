@@ -1,5 +1,5 @@
 <?php
-function redirect(string $url): void
+function redirect(string $url)
 {
     header("Location: {$url}");
     exit;

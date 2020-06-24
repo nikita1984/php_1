@@ -1,5 +1,5 @@
 <h1>Пожалуйста, авторизуйтесь!!</h1>
-<form action="" method="post">
+<form action="" enctype="multipart/form-data" method="post">
     <h3>Введите логин (по умолчанию: admin)</h3>
     <input type="text" name="login">
     <h3>Введите пароль (по умолчанию: admin)</h3>

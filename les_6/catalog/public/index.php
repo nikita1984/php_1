@@ -5,12 +5,12 @@ require __DIR__ . '\..\config\main.php';
 // Подключаем файлы с функциями
 requireFunctions(scandir(ENGINE_DIR));
 
-if ($_GET['page'] == 'singlePage') {
+if (get('page') == 'singlePage') {
     $contentArray = [
         'title' => 'singlePage',
         'template' => 'singlePage_main',
     ];
-} elseif ($_GET['page'] == 'authentication') {
+} elseif (get('page') == 'authentication') {
     $contentArray = [
         'title' => 'authentication',
         'template' => 'authentication',
@@ -57,6 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // текущей сессии присваиваем идетификатор и имя, равные данным пользователя
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['user_name'] = $user['name'];
+        redirect("index.php");
         } else {
             echo "Ошибка авторизации";
         }
