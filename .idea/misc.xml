@@ -4,12 +4,6 @@
     <option name="languageLevel" value="ES6" />
   </component>
   <component name="ProjectPlainTextFileTypeManager">
-    <file url="file://$PROJECT_DIR$/les_6/catalog/templates/content_templates/catalog_leftSidePlus.php" />
-    <file url="file://$PROJECT_DIR$/les_6/catalog/templates/content_templates/catalog_leftSidePlus_One.php" />
-    <file url="file://$PROJECT_DIR$/les_6/catalog/templates/content_templates/catalog_leftSidePlus_OnePlus.php" />
-    <file url="file://$PROJECT_DIR$/les_6/catalog/templates/content_templates/catalog_leftSidePlus_OnePlusFirst.php" />
-    <file url="file://$PROJECT_DIR$/les_6/catalog/templates/content_templates/catalog_leftSidePlus_OnePlusSecond.php" />
-    <file url="file://$PROJECT_DIR$/les_6/catalog/templates/content_templates/catalog_leftSidePlus_Three.php" />
-    <file url="file://$PROJECT_DIR$/les_6/catalog/templates/content_templates/catalog_leftSidePlus_Two.php" />
+    <file url="file://$PROJECT_DIR$/les_6/catalog/public/auth.php" />
   </component>
 </project>
