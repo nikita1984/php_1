@@ -10,6 +10,12 @@ $numbersCartPosition = count($cartData);
 foreach ($cartData as $item) {
     $total += $item['price'] * $item['qty'];
 }
+
+$authButton = $_SESSION['user_name'];
+
+if (is_null($authButton)) {
+    $authButton = 'Пожалуйста авторизуйтесь';
+}
 ?>
 <div class="header__right">
     <div class="sh"><a href="shopping-card.htm"><img src="img/Forma_1.svg" alt="basket"
@@ -59,5 +65,5 @@ foreach ($cartData as $item) {
             <a href="shopping-card.htm" class="sc-btn">go&nbsp;to&nbsp;cart</a>
         </div>
     </div>
-    <a class="button" href="./index.php?page=authentication">Пожалуйста авторизуйтесь<i class="fas fa-caret-down"></i></a>
+    <a class="button" href="./index.php?page=authentication"><?= $authButton ?><i class="fas fa-caret-down"></i></a>
 </div>

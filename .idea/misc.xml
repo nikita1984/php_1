@@ -4,6 +4,6 @@
     <option name="languageLevel" value="ES6" />
   </component>
   <component name="ProjectPlainTextFileTypeManager">
-    <file url="file://$PROJECT_DIR$/les_6/catalog/templates/catalogContent.php" />
+    <file url="file://$PROJECT_DIR$/les_6/catalog/public/auth.php" />
   </component>
 </project>
