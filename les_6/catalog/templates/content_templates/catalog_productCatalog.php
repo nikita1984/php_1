@@ -1,9 +1,8 @@
 <?php
 $sql = 'SELECT * FROM shopTable';
 $catalogData = SQLQuery($sql, 'All');
-$_SESSION['catalogData'] = $catalogData;
 closeConnection();
-// var_dump($catalogData);
+$_SESSION['catalogData'] = $catalogData;
 ?>
 <div class="product-catalog">
     <? foreach ($catalogData as $key => $item): ?>

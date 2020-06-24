@@ -44,8 +44,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if (array_key_exists('login', $_POST)) {
-        $login = post('login');
-        $password = post('password');
+        $login = (string) post('login');
+        $password = (string) post('password');
         // Возможно, что "соль" в  данном примере cо встроенным методом password_hash() является излишней,
         // однако реализовал её чтобы показать понимание урока
         $salt = '5@duh7';
