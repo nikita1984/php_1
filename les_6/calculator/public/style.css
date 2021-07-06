@@ -1,0 +1,14 @@
+.flexCenter {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.formDiv {
+	margin: 1em;
+}
+
+.formInput {
+	margin: 0em 1em;
+	width: 3em;
+}

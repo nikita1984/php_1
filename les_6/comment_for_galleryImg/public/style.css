@@ -1,0 +1,30 @@
+.miniIMG {
+    margin-right: 25px;
+}
+
+.gallery {
+	display: flex;
+	justify-content: center;
+}
+
+.formBlock {
+	margin: 1em;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.form_upDiv {
+	margin-bottom: 1em;
+}
+
+.form_downDiv {
+	display: flex;
+	justify-content: space-around;
+	width: 25em;
+}
+
+.inputTextarea {
+	margin: 0em 1em 2em 1em;
+	width: 50em;
+}
