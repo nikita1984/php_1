@@ -1,0 +1,10 @@
+.miniIMG {
+	width: 108px;
+    height: 158px;
+    margin-right: 25px;
+}
+
+.gallery {
+	display: flex;
+	justify-content: center;
+}
